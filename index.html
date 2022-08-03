@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,54 @@
     <link rel="stylesheet" href="./src/styles/style.css">
     <title>Сайт Артёма Мельничука</title>
 </head>
+
 <body>
-    <header class="header">
+    <div class="wrapper">
+        <div class="content">
+            <div id="preloader">
+                <div class="container">
+                    <div id="preloader-body" class="preloader-body-start">
+                        <h1 id="artem-melnichuk">
+                            Артём Мельничук
+                        </h1>
+                        <h2 id="artem-melnichuk__sub">
+                            актёр кино
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <video id="bg-video" autoplay loop muted conrols>
+                <source src="./src/assets/videos/video-bg-transcode.mp4" type='video/mp4'>
+            </video>
+            <div class="all" id="mainContent">
+                <header class="header">
+                    <div class="container">
+                        <ul class="menu__items">
+                            <li id="filmography" class="menu__item">Фильмография</li>
+                            <li id="video" class="menu__item">Видео</li>
+                            <li id="photo" class="menu__item">Фото</li>
+                            <li id="rezume" class="menu__item">Резюме</li>
+                            <li id="news" class="menu__item">Новости</li>
+                            <li id="theatre" class="menu__item">Театр</li>
+                            <li id="contacts" class="menu__item">Контакты</li>
+                        </ul>
+                    </div>
+                </header>
+                <main class="main">
+                    <div class="container">
+                        
+                    </div>
+                </main>
+                <footer class="footer">
+                    <div class="container">
 
-    </header>
-    <main class="main">
-
-    </main>
-    <footer class="footer">
-        
-    </footer>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="./src/components/preloader.js"></script>
+    <script src="./src/components/header.js"></script>
 </body>
+
 </html>
