@@ -41,7 +41,7 @@ body {
     -webkit-transition: 1s all;
     transition: 1s all;
     opacity: 1;
-    box-shadow: inset 400px 50px 500px;
+    box-shadow: inset 30vw 50px 20vh;
 }
 
 #bg-video {
