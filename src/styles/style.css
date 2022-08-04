@@ -41,13 +41,13 @@ body {
     -webkit-transition: 1s all;
     transition: 1s all;
     opacity: 1;
-    box-shadow: inset 30vw 50px 20vh;
+    box-shadow: inset 37vw 50px 20vh;
 }
 
 #bg-video {
     z-index: 3;
     height: 100vh;
-    position: absolute;
+    position: fixed;
 }
 
 #preloader-body {
@@ -80,7 +80,7 @@ body {
 }
 
 .animation-step1-title {
-    animation: step1Title 0.7s linear;
+    animation: step1Title 1s linear;
     animation-iteration-count: 1;
     position: relative;
     animation-fill-mode: forwards;
@@ -89,7 +89,7 @@ body {
 }
 
 .animation-step1-sub {
-    animation: step1Sub 0.7s linear;
+    animation: step1Sub 1s linear;
     animation-iteration-count: 1;
     position: relative;
     animation-fill-mode: forwards;
@@ -106,13 +106,13 @@ body {
 }
 
 .animation-step2-prel-body {
-    animation: step2prel 0.7s linear;
+    animation: step2prel 1s linear;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
 .animation-fz-20 {
-    animation: fz-20 0.5s linear;
+    animation: fz-20 1s linear;
     animation-iteration-count: 1;
     font-size: 20px;
     text-align: start;
@@ -120,7 +120,7 @@ body {
 }
 
 .animation-fz-16 {
-    animation: fz-16 0.5s linear;
+    animation: fz-16 1s linear;
     animation-iteration-count: 1;
     font-size: 16px;
     text-align: start;
@@ -190,7 +190,7 @@ body {
     }
 
     75% {
-        margin-top: 5vh;
+        margin-top: 10vh;
     }
 
     100% {
@@ -289,7 +289,7 @@ body {
 }
 
 .animation-fadeLeft {
-    animation: fadeLeft 0.5s linear;
+    animation: fadeLeft 1s linear;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     position: relative;
@@ -318,18 +318,20 @@ body {
 }
 
 .header {
-    position: relative;
+    position: fixed;
     z-index: 1000;
     margin-top: 40px;
+    margin-left: 460px;
 }
 
 .menu__items {
-    margin-left: 550px;
+    margin-left: auto;
+    position: relative;
     display: flex;
-    justify-content: space-between;
 }
 
 .menu__item {
+    margin-left: 36px;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
@@ -342,6 +344,138 @@ body {
     color: #D8AC56 !important;
 }
 
-.main {}
+::-webkit-scrollbar {
+    height: 20px;
+    width: 0;
+    position: relative;
+    z-index: 1;
+}
 
-.footer {}
+.scroll-line {
+    width: 100%;
+    height: 10px;
+    border-radius: 30px;
+    background: #D3D2D6;
+    position: relative;
+    top: -15px;
+    z-index: -1;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #D3D2D6;
+    border-radius: 30px;
+    display: none;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #2E2843;
+    border-radius: 30px;
+}
+
+
+
+.section__filmography {}
+
+.section__filmography-chooser {
+    display: flex;
+    margin-left: 258px;
+    margin-top: 90px;
+}
+
+.unchoosed {
+    background: none !important;
+}
+
+.personal__filmography {
+    cursor: pointer;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    width: 109px;
+    height: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: none !important;
+    background: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    line-height: 35px;
+}
+
+.personal__filmography:first-child {
+    border-radius: 4px 0 0 0;
+}
+
+.personal__filmography:last-child {
+    border-radius: 0 4px 0 0;
+}
+
+.personal__filmography span {
+    vertical-align: middle;
+}
+
+.section__filmography-items {
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
+    height: 80vh;
+}
+
+.section__filmography-item {
+    width: 480px;
+    height: 267px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px 0px 12px 12px;
+    margin-bottom: 20px;
+    padding: 24px 20px;
+    box-sizing: border-box;
+}
+
+.typeof__film {
+    font-weight: 400;
+    font-size: 12px;    
+    margin-bottom: 6px;
+    color: rgba(255, 255, 255, 0.6);
+
+}
+
+.nameof__film {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.yearof__film, .roleof__film, .authorof__film, .castingof__film {
+    margin-bottom: 6px;
+}
+
+.yearof__film-word, .roleof__film-word, .authorof__film-word,  .castingof__film-word{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.yearof__film-number, .roleof__film-number, .authorof__film-number, .castingof__film-number {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.main {
+    position: relative;
+    z-index: 1000;
+}
+
+.footer {
+    position: relative;
+    z-index: 1000;
+}

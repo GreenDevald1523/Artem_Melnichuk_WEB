@@ -28,10 +28,10 @@
                 <source src="./src/assets/videos/video-bg-transcode.mp4" type='video/mp4'>
             </video>
             <div class="all" id="mainContent">
-                <header class="header">
-                    <div class="container">
+                <div class="container">
+                    <header class="header">
                         <ul class="menu__items">
-                            <li id="filmography" class="menu__item">Фильмография</li>
+                            <li id="filmography" class="menu__item clr-gold">Фильмография</li>
                             <li id="video" class="menu__item">Видео</li>
                             <li id="photo" class="menu__item">Фото</li>
                             <li id="rezume" class="menu__item">Резюме</li>
@@ -39,11 +39,67 @@
                             <li id="theatre" class="menu__item">Театр</li>
                             <li id="contacts" class="menu__item">Контакты</li>
                         </ul>
-                    </div>
-                </header>
+                    </header>
+                </div>
                 <main class="main">
                     <div class="container">
-                        
+                        <section class="section__filmography">
+                            <div class="section__filmography-chooser">
+                                <div class="personal__filmography" id="izbrannaya">
+                                    <span>Избранная</span>
+                                </div>
+                                <div class="personal__filmography unchoosed"  id="polnaya">
+                                    <span>Полная</span>
+                                </div>
+                            </div>
+                            <div class="section__filmography-items">
+                                <div class="section__filmography-item">
+                                    <p class="typeof__film">
+                                        художественный фильм
+                                    </p>
+                                    <h2 class="nameof__film">
+                                        Закрытый сезон
+                                    </h2>
+                                    <p class="yearof__film">
+                                        <span class="yearof__film-word">
+                                            Год:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            2021
+                                        </span>
+                                    </p>
+                                    <p class="roleof__film">
+                                        <span class="roleof__film-word">
+                                            Роль:
+                                        </span>
+                                        <span class="roleof__film-number">
+                                            Алёша
+                                        </span>
+                                    </p>
+                                    <p class="authorof__film">
+                                        <span class="authorof__film-word">
+                                            Режиссер:
+                                        </span>
+                                        <span class="authorof__film-number">
+                                            Дарья Полторацкая
+                                        </span>
+                                    </p>
+                                    <p class="castingof__film">
+                                        <span class="castingof__film-word">
+                                            Кастинг-директор:
+                                        </span>
+                                        <span class="castingof__film-number">
+                                            Дарья Полторацкая
+                                        </span>
+                                    </p>
+
+                                </div>
+                                <div class="section__filmography-item"></div>
+                                <div class="section__filmography-item"></div>
+                                <div class="section__filmography-item"></div>
+                                <div class="section__filmography-item"></div>
+                            </div>
+                        </section>
                     </div>
                 </main>
                 <footer class="footer">
@@ -56,6 +112,7 @@
     </div>
     <script src="./src/components/preloader.js"></script>
     <script src="./src/components/header.js"></script>
+    <script src="./src/components/main.js"></script>
 </body>
 
 </html>
