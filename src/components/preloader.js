@@ -12,5 +12,5 @@ document.body.onload = function () {
     preloaderTitle.classList.add("animation-fz-20");
     preloaderSub.classList.add("animation-fz-16");
     mainContent.classList.add('animation-fadeLeft')
-  }, 1000)
+  }, 1500)
 };

@@ -80,7 +80,7 @@ body {
 }
 
 .animation-step1-title {
-    animation: step1Title 1s linear;
+    animation: step1Title 0.8s linear;
     animation-iteration-count: 1;
     position: relative;
     animation-fill-mode: forwards;
@@ -89,7 +89,7 @@ body {
 }
 
 .animation-step1-sub {
-    animation: step1Sub 1s linear;
+    animation: step1Sub 0.8s linear;
     animation-iteration-count: 1;
     position: relative;
     animation-fill-mode: forwards;
@@ -98,7 +98,7 @@ body {
 }
 
 .animation-step1-bg {
-    animation: step1Bg 1s linear;
+    animation: step1Bg 0.8s linear;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     right: 0px;
@@ -106,13 +106,13 @@ body {
 }
 
 .animation-step2-prel-body {
-    animation: step2prel 1s linear;
+    animation: step2prel 0.8s linear;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
 .animation-fz-20 {
-    animation: fz-20 1s linear;
+    animation: fz-20 0.8s linear;
     animation-iteration-count: 1;
     font-size: 20px;
     text-align: start;
@@ -120,7 +120,7 @@ body {
 }
 
 .animation-fz-16 {
-    animation: fz-16 1s linear;
+    animation: fz-16 0.8s linear;
     animation-iteration-count: 1;
     font-size: 16px;
     text-align: start;
@@ -338,6 +338,7 @@ body {
     color: white;
     cursor: pointer;
     transition: all 0.3s ease-in-out 0s;
+    scroll-snap-align: start;
 }
 
 .clr-gold {
@@ -345,42 +346,56 @@ body {
 }
 
 ::-webkit-scrollbar {
-    height: 20px;
-    width: 0;
-    position: relative;
-    z-index: 1;
+    width: 6px;
+    display: none;
 }
 
 .scroll-line {
-    width: 100%;
-    height: 10px;
-    border-radius: 30px;
-    background: #D3D2D6;
+    width: 530px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 90px;
+    border: 1px solid #D8AC56;
+    position: absolute;
+    top: 300px;
+    left: 230px;
+    z-index: 1000;
+    transform: rotate(90deg);
+}
+
+.scroll-line-thumb {
+    width: 20px;
+    height: 20px;
     position: relative;
-    top: -15px;
-    z-index: -1;
+    bottom: 7.1px;
+    right: 1px;
+    border-radius: 50%;
+    background: #D8AC56;
+    cursor: pointer;
 }
 
 
 /* Track */
 
 ::-webkit-scrollbar-track {
-    background: #D3D2D6;
-    border-radius: 30px;
-    display: none;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 90px;
+    border: 1px solid #D8AC56;
 }
 
 
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-    background: #2E2843;
-    border-radius: 30px;
+    background: #D8AC56;
+    width: 5px;
+    border-radius: 100px;
+    border: 4px solid hsl(0 0% 92% / 1) !important;
 }
 
-
-
-.section__filmography {}
+.section__filmography {
+    position: relative;
+}
 
 .section__filmography-chooser {
     display: flex;
@@ -390,9 +405,11 @@ body {
 
 .unchoosed {
     background: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
 }
 
 .personal__filmography {
+    border: 1px solid rgba(255, 255, 255, 0.001);
     cursor: pointer;
     font-family: 'Inter';
     font-weight: 400;
@@ -400,7 +417,6 @@ body {
     color: #FFFFFF;
     width: 109px;
     height: 35px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: none !important;
     background: rgba(255, 255, 255, 0.3);
     text-align: center;
@@ -420,9 +436,9 @@ body {
 }
 
 .section__filmography-items {
+    height: 80vh;
     scroll-snap-type: y proximity;
     overflow-y: scroll;
-    height: 80vh;
 }
 
 .section__filmography-item {
@@ -433,11 +449,18 @@ body {
     margin-bottom: 20px;
     padding: 24px 20px;
     box-sizing: border-box;
+    position: relative;
+}
+
+.filmrography__img {
+    position: absolute;
+    top: 24px;
+    right: 20px;
 }
 
 .typeof__film {
     font-weight: 400;
-    font-size: 12px;    
+    font-size: 12px;
     margin-bottom: 6px;
     color: rgba(255, 255, 255, 0.6);
 
@@ -453,9 +476,10 @@ body {
 
 .yearof__film, .roleof__film, .authorof__film, .castingof__film {
     margin-bottom: 6px;
+    width: 245px;
 }
 
-.yearof__film-word, .roleof__film-word, .authorof__film-word,  .castingof__film-word{
+.yearof__film-word, .roleof__film-word, .authorof__film-word, .castingof__film-word {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
