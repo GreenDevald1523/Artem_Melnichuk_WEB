@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lg-thumbnail.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lg-zoom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js "></script>
     <title>Сайт Артёма Мельничука</title>
 </head>
 
@@ -14,7 +20,7 @@
         <div class="content">
             <div id="preloader">
                 <div class="container">
-                    <div id="preloader-body" class="preloader-body-start">
+                    <div id="preloader-body" class="preloader-body-start animation-fadeIn">
                         <h1 id="artem-melnichuk">
                             Артём Мельничук
                         </h1>
@@ -24,10 +30,12 @@
                     </div>
                 </div>
             </div>
-            <video id="bg-video" autoplay loop muted conrols>
-                <source src="./src/assets/videos/video-bg-transcode.mp4" type='video/mp4'>
-            </video>
-            <div class="all" id="mainContent">
+            <div class="bg-video-container">
+                <video id="bg-video" autoplay loop muted>
+                    <source src="./src/assets/videos/video-bg-transcode.mp4" type='video/mp4'>
+                </video>
+            </div>
+            <div class="all opacity-0" id="mainContent">
                 <div class="container">
                     <header class="header">
                         <ul class="menu__items">
@@ -52,7 +60,7 @@
                                     <span>Полная</span>
                                 </div>
                             </div>
-                            <div class="section__filmography-items">
+                            <div id="section__filmography-items-izb" class="section__filmography-items">
                                 <div class="section__filmography-item">
                                     <p class="typeof__film">
                                         художественный фильм
@@ -92,7 +100,101 @@
                                             Дарья Полторацкая
                                         </span>
                                     </p>
-                                    <img src="./src/assets/img/filmography1.svg" alt="" class="filmrography__img">
+                                    <div class="slider">
+                                        <div class="slider__slides">
+                                            <div class="slider__slide slider__slide1 active">
+                                                <img src="./src/assets/img/filmography1.svg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide1">
+                                                <img src="./src/assets/img/filmography2.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide1">
+                                                <img src="./src/assets/img/filmography3.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide1">
+                                                <img src="./src/assets/img/filmography4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div id="nav-button--prev1" class="slider__nav-button slider__nav-button-prev">
+                                        </div>
+                                        <div id="nav-button--next1" class="slider__nav-button slider__nav-button-next">
+                                        </div>
+                                        <div class="slider__nav">
+                                            <div class="slider__navlink slider__navlink1 active"></div>
+                                            <div class="slider__navlink slider__navlink1"></div>
+                                            <div class="slider__navlink slider__navlink1"></div>
+                                            <div class="slider__navlink slider__navlink1"></div>
+                                        </div>
+                                    </div>
+                                    <a href="#">
+                                        <img src="./src/assets/img/youtube.svg" alt="" class="filmography__ytube">
+                                    </a>
+                                </div>
+                                <div class="section__filmography-item main-role-border">
+                                    <p class="typeof__film">
+                                        художественный фильм
+                                    </p>
+                                    <h2 class="nameof__film">
+                                        Холодные берега 2
+                                    </h2>
+                                    <p class="yearof__film">
+                                        <span class="yearof__film-word">
+                                            Год:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            2021
+                                        </span>
+                                    </p>
+                                    <p class="roleof__film">
+                                        <span class="roleof__film-word main-role-clr">
+                                            Главная роль:
+                                        </span>
+                                        <span class="roleof__film-number">
+                                            Паша Кондратьев
+                                        </span>
+                                    </p>
+                                    <p class="authorof__film">
+                                        <span class="authorof__film-word">
+                                            Режиссер:
+                                        </span>
+                                        <span class="authorof__film-number">
+                                            Сергей Комаров
+                                        </span>
+                                    </p>
+                                    <p class="castingof__film">
+                                        <span class="castingof__film-word">
+                                            Кастинг-директор:
+                                        </span>
+                                        <span class="castingof__film-number">
+                                            Дарья Полторацкая
+                                        </span>
+                                    </p>
+                                    <div class="slider">
+                                        <div class="slider__slides">
+                                            <div class="slider__slide slider__slide2 active">
+                                                <img src="./src/assets/img/filmography1.svg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide2">
+                                                <img src="./src/assets/img/filmography2.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide2">
+                                                <img src="./src/assets/img/filmography3.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide2">
+                                                <img src="./src/assets/img/filmography4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div id="nav-button--prev2" class="slider__nav-button slider__nav-button-prev">
+                                        </div>
+                                        <div id="nav-button--next2" class="slider__nav-button slider__nav-button-next">
+                                        </div>
+                                        <div class="slider__nav">
+                                            <div class="slider__navlink slider__navlink2 active"></div>
+                                            <div class="slider__navlink slider__navlink2"></div>
+                                            <div class="slider__navlink slider__navlink2"></div>
+                                            <div class="slider__navlink slider__navlink2"></div>
+                                        </div>
+                                    </div>
                                     <a href="#">
                                         <img src="./src/assets/img/youtube.svg" alt="" class="filmography__ytube">
                                     </a>
@@ -136,7 +238,32 @@
                                             Дарья Полторацкая
                                         </span>
                                     </p>
-                                    <img src="./src/assets/img/filmography1.svg" alt="" class="filmrography__img">
+                                    <div class="slider">
+                                        <div class="slider__slides">
+                                            <div class="slider__slide slider__slide3 active">
+                                                <img src="./src/assets/img/filmography1.svg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide3">
+                                                <img src="./src/assets/img/filmography2.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide3">
+                                                <img src="./src/assets/img/filmography3.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide3">
+                                                <img src="./src/assets/img/filmography4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div id="nav-button--prev3" class="slider__nav-button slider__nav-button-prev">
+                                        </div>
+                                        <div id="nav-button--next3" class="slider__nav-button slider__nav-button-next">
+                                        </div>
+                                        <div class="slider__nav">
+                                            <div class="slider__navlink slider__navlink3 active"></div>
+                                            <div class="slider__navlink slider__navlink3"></div>
+                                            <div class="slider__navlink slider__navlink3"></div>
+                                            <div class="slider__navlink slider__navlink3"></div>
+                                        </div>
+                                    </div>
                                     <a href="#">
                                         <img src="./src/assets/img/youtube.svg" alt="" class="filmography__ytube">
                                     </a>
@@ -180,7 +307,32 @@
                                             Дарья Полторацкая
                                         </span>
                                     </p>
-                                    <img src="./src/assets/img/filmography1.svg" alt="" class="filmrography__img">
+                                    <div class="slider">
+                                        <div class="slider__slides">
+                                            <div class="slider__slide slider__slide4 active">
+                                                <img src="./src/assets/img/filmography1.svg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide4">
+                                                <img src="./src/assets/img/filmography2.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide4">
+                                                <img src="./src/assets/img/filmography3.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide4">
+                                                <img src="./src/assets/img/filmography4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div id="nav-button--prev4" class="slider__nav-button slider__nav-button-prev">
+                                        </div>
+                                        <div id="nav-button--next4" class="slider__nav-button slider__nav-button-next">
+                                        </div>
+                                        <div class="slider__nav">
+                                            <div class="slider__navlink slider__navlink4 active"></div>
+                                            <div class="slider__navlink slider__navlink4"></div>
+                                            <div class="slider__navlink slider__navlink4"></div>
+                                            <div class="slider__navlink slider__navlink4"></div>
+                                        </div>
+                                    </div>
                                     <a href="#">
                                         <img src="./src/assets/img/youtube.svg" alt="" class="filmography__ytube">
                                     </a>
@@ -224,7 +376,103 @@
                                             Дарья Полторацкая
                                         </span>
                                     </p>
-                                    <img src="./src/assets/img/filmography1.svg" alt="" class="filmrography__img">
+                                    <div class="slider">
+                                        <div class="slider__slides">
+                                            <div class="slider__slide slider__slide5 active">
+                                                <img src="./src/assets/img/filmography1.svg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide5">
+                                                <img src="./src/assets/img/filmography2.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide5">
+                                                <img src="./src/assets/img/filmography3.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide5">
+                                                <img src="./src/assets/img/filmography4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div id="nav-button--prev5" class="slider__nav-button slider__nav-button-prev">
+                                        </div>
+                                        <div id="nav-button--next5" class="slider__nav-button slider__nav-button-next">
+                                        </div>
+                                        <div class="slider__nav">
+                                            <div class="slider__navlink slider__navlink5 active"></div>
+                                            <div class="slider__navlink slider__navlink5"></div>
+                                            <div class="slider__navlink slider__navlink5"></div>
+                                            <div class="slider__navlink slider__navlink5"></div>
+                                        </div>
+                                    </div>
+                                    <a href="#">
+                                        <img src="./src/assets/img/youtube.svg" alt="" class="filmography__ytube">
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="section__filmography-items-pol" class="section__filmography-items opacity-0">
+                                <div class="section__filmography-item main-role-border">
+                                    <p class="typeof__film">
+                                        художественный фильм
+                                    </p>
+                                    <h2 class="nameof__film">
+                                        Холодные берега 2
+                                    </h2>
+                                    <p class="yearof__film">
+                                        <span class="yearof__film-word">
+                                            Год:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            2021
+                                        </span>
+                                    </p>
+                                    <p class="roleof__film">
+                                        <span class="roleof__film-word main-role-clr">
+                                            Главная роль:
+                                        </span>
+                                        <span class="roleof__film-number">
+                                            Паша Кондратьев
+                                        </span>
+                                    </p>
+                                    <p class="authorof__film">
+                                        <span class="authorof__film-word">
+                                            Режиссер:
+                                        </span>
+                                        <span class="authorof__film-number">
+                                            Сергей Комаров
+                                        </span>
+                                    </p>
+                                    <p class="castingof__film">
+                                        <span class="castingof__film-word">
+                                            Кастинг-директор:
+                                        </span>
+                                        <span class="castingof__film-number">
+                                            Дарья Полторацкая
+                                        </span>
+                                    </p>
+                                    <div class="slider">
+                                        <div class="slider__slides">
+                                            <div class="slider__slide slider__slide6 active">
+                                                <img src="./src/assets/img/filmography1.svg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide6">
+                                                <img src="./src/assets/img/filmography2.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide6">
+                                                <img src="./src/assets/img/filmography3.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide6">
+                                                <img src="./src/assets/img/filmography4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div id="nav-button--prev6" class="slider__nav-button slider__nav-button-prev">
+                                        </div>
+                                        <div id="nav-button--next6" class="slider__nav-button slider__nav-button-next">
+                                        </div>
+                                        <div class="slider__nav">
+                                            <div class="slider__navlink slider__navlink6 active"></div>
+                                            <div class="slider__navlink slider__navlink6"></div>
+                                            <div class="slider__navlink slider__navlink6"></div>
+                                            <div class="slider__navlink slider__navlink6"></div>
+                                        </div>
+                                    </div>
                                     <a href="#">
                                         <img src="./src/assets/img/youtube.svg" alt="" class="filmography__ytube">
                                     </a>
@@ -268,7 +516,32 @@
                                             Дарья Полторацкая
                                         </span>
                                     </p>
-                                    <img src="./src/assets/img/filmography1.svg" alt="" class="filmrography__img">
+                                    <div class="slider">
+                                        <div class="slider__slides">
+                                            <div class="slider__slide slider__slide7 active">
+                                                <img src="./src/assets/img/filmography1.svg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide7">
+                                                <img src="./src/assets/img/filmography2.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide7">
+                                                <img src="./src/assets/img/filmography3.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide7">
+                                                <img src="./src/assets/img/filmography4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div id="nav-button--prev7" class="slider__nav-button slider__nav-button-prev">
+                                        </div>
+                                        <div id="nav-button--next7" class="slider__nav-button slider__nav-button-next">
+                                        </div>
+                                        <div class="slider__nav">
+                                            <div class="slider__navlink slider__navlink7 active"></div>
+                                            <div class="slider__navlink slider__navlink7"></div>
+                                            <div class="slider__navlink slider__navlink7"></div>
+                                            <div class="slider__navlink slider__navlink7"></div>
+                                        </div>
+                                    </div>
                                     <a href="#">
                                         <img src="./src/assets/img/youtube.svg" alt="" class="filmography__ytube">
                                     </a>
@@ -312,7 +585,32 @@
                                             Дарья Полторацкая
                                         </span>
                                     </p>
-                                    <img src="./src/assets/img/filmography1.svg" alt="" class="filmrography__img">
+                                    <div class="slider">
+                                        <div class="slider__slides">
+                                            <div class="slider__slide slider__slide8 active">
+                                                <img src="./src/assets/img/filmography1.svg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide8">
+                                                <img src="./src/assets/img/filmography2.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide8">
+                                                <img src="./src/assets/img/filmography3.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide8">
+                                                <img src="./src/assets/img/filmography4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div id="nav-button--prev8" class="slider__nav-button slider__nav-button-prev">
+                                        </div>
+                                        <div id="nav-button--next8" class="slider__nav-button slider__nav-button-next">
+                                        </div>
+                                        <div class="slider__nav">
+                                            <div class="slider__navlink slider__navlink8 active"></div>
+                                            <div class="slider__navlink slider__navlink8"></div>
+                                            <div class="slider__navlink slider__navlink8"></div>
+                                            <div class="slider__navlink slider__navlink8"></div>
+                                        </div>
+                                    </div>
                                     <a href="#">
                                         <img src="./src/assets/img/youtube.svg" alt="" class="filmography__ytube">
                                     </a>
@@ -356,7 +654,32 @@
                                             Дарья Полторацкая
                                         </span>
                                     </p>
-                                    <img src="./src/assets/img/filmography1.svg" alt="" class="filmrography__img">
+                                    <div class="slider">
+                                        <div class="slider__slides">
+                                            <div class="slider__slide slider__slide9 active">
+                                                <img src="./src/assets/img/filmography1.svg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide9">
+                                                <img src="./src/assets/img/filmography2.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide9">
+                                                <img src="./src/assets/img/filmography3.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide9">
+                                                <img src="./src/assets/img/filmography4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div id="nav-button--prev9" class="slider__nav-button slider__nav-button-prev">
+                                        </div>
+                                        <div id="nav-button--next9" class="slider__nav-button slider__nav-button-next">
+                                        </div>
+                                        <div class="slider__nav">
+                                            <div class="slider__navlink slider__navlink9 active"></div>
+                                            <div class="slider__navlink slider__navlink9"></div>
+                                            <div class="slider__navlink slider__navlink9"></div>
+                                            <div class="slider__navlink slider__navlink9"></div>
+                                        </div>
+                                    </div>
                                     <a href="#">
                                         <img src="./src/assets/img/youtube.svg" alt="" class="filmography__ytube">
                                     </a>
@@ -400,139 +723,32 @@
                                             Дарья Полторацкая
                                         </span>
                                     </p>
-                                    <img src="./src/assets/img/filmography1.svg" alt="" class="filmrography__img">
-                                    <a href="#">
-                                        <img src="./src/assets/img/youtube.svg" alt="" class="filmography__ytube">
-                                    </a>
-                                </div>
-                                <div class="section__filmography-item">
-                                    <p class="typeof__film">
-                                        художественный фильм
-                                    </p>
-                                    <h2 class="nameof__film">
-                                        Закрытый сезон
-                                    </h2>
-                                    <p class="yearof__film">
-                                        <span class="yearof__film-word">
-                                            Год:
-                                        </span>
-                                        <span class="yearof__film-number">
-                                            2021
-                                        </span>
-                                    </p>
-                                    <p class="roleof__film">
-                                        <span class="roleof__film-word">
-                                            Роль:
-                                        </span>
-                                        <span class="roleof__film-number">
-                                            Алёша
-                                        </span>
-                                    </p>
-                                    <p class="authorof__film">
-                                        <span class="authorof__film-word">
-                                            Режиссер:
-                                        </span>
-                                        <span class="authorof__film-number">
-                                            Дарья Полторацкая
-                                        </span>
-                                    </p>
-                                    <p class="castingof__film">
-                                        <span class="castingof__film-word">
-                                            Кастинг-директор:
-                                        </span>
-                                        <span class="castingof__film-number">
-                                            Дарья Полторацкая
-                                        </span>
-                                    </p>
-                                    <img src="./src/assets/img/filmography1.svg" alt="" class="filmrography__img">
-                                    <a href="#">
-                                        <img src="./src/assets/img/youtube.svg" alt="" class="filmography__ytube">
-                                    </a>
-                                </div>
-                                <div class="section__filmography-item">
-                                    <p class="typeof__film">
-                                        художественный фильм
-                                    </p>
-                                    <h2 class="nameof__film">
-                                        Закрытый сезон
-                                    </h2>
-                                    <p class="yearof__film">
-                                        <span class="yearof__film-word">
-                                            Год:
-                                        </span>
-                                        <span class="yearof__film-number">
-                                            2021
-                                        </span>
-                                    </p>
-                                    <p class="roleof__film">
-                                        <span class="roleof__film-word">
-                                            Роль:
-                                        </span>
-                                        <span class="roleof__film-number">
-                                            Алёша
-                                        </span>
-                                    </p>
-                                    <p class="authorof__film">
-                                        <span class="authorof__film-word">
-                                            Режиссер:
-                                        </span>
-                                        <span class="authorof__film-number">
-                                            Дарья Полторацкая
-                                        </span>
-                                    </p>
-                                    <p class="castingof__film">
-                                        <span class="castingof__film-word">
-                                            Кастинг-директор:
-                                        </span>
-                                        <span class="castingof__film-number">
-                                            Дарья Полторацкая
-                                        </span>
-                                    </p>
-                                    <img src="./src/assets/img/filmography1.svg" alt="" class="filmrography__img">
-                                    <a href="#">
-                                        <img src="./src/assets/img/youtube.svg" alt="" class="filmography__ytube">
-                                    </a>
-                                </div>
-                                <div class="section__filmography-item">
-                                    <p class="typeof__film">
-                                        художественный фильм
-                                    </p>
-                                    <h2 class="nameof__film">
-                                        Закрытый сезон
-                                    </h2>
-                                    <p class="yearof__film">
-                                        <span class="yearof__film-word">
-                                            Год:
-                                        </span>
-                                        <span class="yearof__film-number">
-                                            2021
-                                        </span>
-                                    </p>
-                                    <p class="roleof__film">
-                                        <span class="roleof__film-word">
-                                            Роль:
-                                        </span>
-                                        <span class="roleof__film-number">
-                                            Алёша
-                                        </span>
-                                    </p>
-                                    <p class="authorof__film">
-                                        <span class="authorof__film-word">
-                                            Режиссер:
-                                        </span>
-                                        <span class="authorof__film-number">
-                                            Дарья Полторацкая
-                                        </span>
-                                    </p>
-                                    <p class="castingof__film">
-                                        <span class="castingof__film-word">
-                                            Кастинг-директор:
-                                        </span>
-                                        <span class="castingof__film-number">
-                                            Дарья Полторацкая
-                                        </span>
-                                    </p>
-                                    <img src="./src/assets/img/filmography1.svg" alt="" class="filmrography__img">
+                                    <div class="slider">
+                                        <div class="slider__slides">
+                                            <div class="slider__slide slider__slide10 active">
+                                                <img src="./src/assets/img/filmography1.svg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide10">
+                                                <img src="./src/assets/img/filmography2.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide10">
+                                                <img src="./src/assets/img/filmography3.jpg" alt="">
+                                            </div>
+                                            <div class="slider__slide slider__slide10">
+                                                <img src="./src/assets/img/filmography4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div id="nav-button--prev10" class="slider__nav-button slider__nav-button-prev">
+                                        </div>
+                                        <div id="nav-button--next10" class="slider__nav-button slider__nav-button-next">
+                                        </div>
+                                        <div class="slider__nav">
+                                            <div class="slider__navlink slider__navlink10 active"></div>
+                                            <div class="slider__navlink slider__navlink10"></div>
+                                            <div class="slider__navlink slider__navlink10"></div>
+                                            <div class="slider__navlink slider__navlink10"></div>
+                                        </div>
+                                    </div>
                                     <a href="#">
                                         <img src="./src/assets/img/youtube.svg" alt="" class="filmography__ytube">
                                     </a>
@@ -540,22 +756,378 @@
                             </div>
                             <div class="scroll-line">
                                 <div class="scroll-line-thumb"></div>
+                                <div class="current-year">
+                                    2021
+                                </div>
                             </div>
                         </section>
+                        <section class="section__video opacity-0">
+                            <div class="section__video-items">
+                                <div class="section__video-item">
+                                    <p class="section__video-item-name">
+                                        Шоурил актера (2020) и еще очень длинное...
+                                    </p>
+                                    <iframe class="section__video-item-video" width="640" height="360"
+                                        src="https://www.youtube.com/embed/nlYw5e4r3_c?feature=oembed" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="section__video-item">
+                                    <p class="section__video-item-name">
+                                        Артем Мельничук - видео визитка актера (2020...
+                                    </p>
+                                    <iframe class="section__video-item-video" width="560" height="315"
+                                        src="https://www.youtube.com/embed/INXplQezodo" title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="section__video-item">
+                                    <p class="section__video-item-name">
+                                        Трейлер "Ни шагу назад" (смотреть онлайн в HD...
+                                    </p>
+                                    <iframe class="section__video-item-video" width="560" height="315"
+                                        src="https://www.youtube.com/embed/GVanbP7amOo" title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="section__video-item">
+                                    <p class="section__video-item-name">
+                                        Трейлер 2021 <br> Закрытый сезон (сериал...
+                                    </p>
+                                    <iframe class="section__video-item-video"
+                                        src="https://player.vimeo.com/video/523949155?app_id=122963" width="640"
+                                        height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                                        allowfullscreen
+                                        title="Трейлер 2021 | Закрытый сезон (сериал про карантин коронавирус эпидемию) актер Артем Мельничук"></iframe>
+                                </div>
+                                <div class="section__video-item">
+                                    <p class="section__video-item-name">
+                                        Шоурил актера (2020) и еще очень длинное...
+                                    </p>
+                                    <iframe class="section__video-item-video" width="640" height="360"
+                                        src="https://www.youtube.com/embed/BbJVLPxsW84?start=640&#038;feature=oembed"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="section__video-item">
+                                    <p class="section__video-item-name">
+                                        Шоурил актера (2020) и еще очень длинное...
+                                    </p>
+                                    <iframe class="section__video-item-video" width="640" height="360"
+                                        src="https://www.youtube.com/embed/IiGc45J66nE?feature=oembed" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="section__video-item">
+                                    <p class="section__video-item-name">
+                                        Шоурил актера (2020) и еще очень длинное...
+                                    </p>
+                                    <iframe class="section__video-item-video" width="640" height="360"
+                                        src="https://www.youtube.com/embed/G5ixzrKK78I?start=1195&#038;feature=oembed"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="section__video-item">
+                                    <p class="section__video-item-name">
+                                        Шоурил актера (2020) и еще очень длинное...
+                                    </p>
+                                    <iframe class="section__video-item-video" width="640" height="360"
+                                        src="https://www.youtube.com/embed/zZl4LxLvNEY?feature=oembed" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="scroll-line">
+                                <div class="scroll-line-thumb"></div>
+                                <div class="current-year">
+                                    2021
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section__photo opacity-0">
+                            <div class="section__photo-items" id="animated-thumbnails">
+                                <a class="section__photo-item" href="./src/assets/img/photo3.jpg">
+                                    <img alt=".." src="./src/assets/img/photo3.jpg" />
+                                </a>
+                                <a class="section__photo-item" href="./src/assets/img/photo2.jpg"
+                                    data-external-thumb-image="./src/assets/img/photo3.jpg">
+                                    <img alt=".." src="./src/assets/img/photo2.jpg" />
+                                </a>
+                                <a class="section__photo-item" href="./src/assets/img/photo1.jpg"
+                                    data-external-thumb-image="./src/assets/img/photo3.jpg">
+                                    <img class="img-responsive" alt=".." src="./src/assets/img/photo1.jpg" />
+                                </a>
+                                <a class="section__photo-item" href="./src/assets/img/photo4.jpg"
+                                    data-external-thumb-image="./src/assets/img/photo3.jpg">
+                                    <img class="img-responsive" alt=".." src="./src/assets/img/photo4.jpg" />
+                                </a>
+                                <a class="section__photo-item" href="./src/assets/img/photo5.jpg"
+                                    data-external-thumb-image="./src/assets/img/photo3.jpg">
+                                    <img class="img-responsive" alt=".." src="./src/assets/img/photo5.jpg" />
+                                </a>
+                                <a class="section__photo-item" href="./src/assets/img/photo6.jpg"
+                                    data-external-thumb-image="./src/assets/img/photo3.jpg">
+                                    <img class="img-responsive" alt=".." src="./src/assets/img/photo6.jpg" />
+                                </a>
+                                <a class="section__photo-item" href="./src/assets/img/photo7.jpg"
+                                    data-external-thumb-image="./src/assets/img/photo3.jpg">
+                                    <img class="img-responsive" alt=".." src="./src/assets/img/photo7.jpg" />
+                                </a>
+                                <a class="section__photo-item" href="./src/assets/img/photo8.jpg"
+                                    data-external-thumb-image="./src/assets/img/photo3.jpg">
+                                    <img class="img-responsive" alt=".." src="./src/assets/img/photo8.jpg" />
+                                </a>
+                                <a class="section__photo-item" href="./src/assets/img/photo9.jpg"
+                                    data-external-thumb-image="./src/assets/img/photo3.jpg">
+                                    <img class="img-responsive" alt=".." src="./src/assets/img/photo9.jpg" />
+                                </a>
+                                <a class="section__photo-item" href="./src/assets/img/photo10.jpg"
+                                    data-external-thumb-image="./src/assets/img/photo3.jpg">
+                                    <img class="img-responsive" alt=".." src="./src/assets/img/photo10.jpg" />
+                                </a>
+                            </div>
+                            <div class="scroll-line">
+                                <div class="scroll-line-thumb"></div>
+                                <div class="current-year">
+                                    2021
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section__rezume opacity-0">
+                            <div class="section__rezume-body">
+                                <h2 class="section__rezume-title">
+                                    Артём Мельничук
+                                </h2>
+                                <p class="section__rezume-sub">
+                                    актёр кино
+                                </p>
+                                <p class="section__rezume-benef">
+                                    Со мной легко и приятно работать
+                                </p>
+                                <div class="section__rezume-sec">
+                                    <h3 class="section__rezume-exp-title">
+                                        Опыт
+                                    </h3>
+                                    <p class="section__rezume-infoline">
+                                        <span class="yearof__film-word">
+                                            Профессия:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            актер театра и кино
+                                        </span>
+                                    </p>
+                                    <p class="section__rezume-infoline">
+                                        <span class="yearof__film-word">
+                                            Образование:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            Крымский Театральный вуз “Школа-студия при КАРДИ им.Горького” - актерское
+                                            искусство
+                                        </span>
+                                    </p>
+                                    <p class="section__rezume-infoline">
+                                        <span class="yearof__film-word">
+                                            Мастер:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            Крючков В. Г.
+                                        </span>
+                                    </p>
+                                    <p class="section__rezume-infoline">
+
+                                        <span class="yearof__film-number">
+                                            2009-2013
+                                        </span>
+                                    </p>
+                                </div>
+
+                                <div class="section__rezume-sec">
+                                    <h3 class="section__rezume-exp-title">
+                                        Внешность
+                                    </h3>
+                                    <p class="section__rezume-infoline">
+                                        <span class="yearof__film-word">
+                                            Внешность:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            высокий, худощавый, русые волосы, юное лицо
+                                        </span>
+                                    </p>
+                                    <p class="section__rezume-infoline">
+                                        <span class="yearof__film-word">
+                                            Игровой возраст:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            16-25лет
+                                        </span>
+                                    </p>
+                                    <p class="section__rezume-infoline">
+                                        <span class="yearof__film-word">
+                                            Возраст:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            26лет
+                                        </span>
+                                    </p>
+                                    <p class="section__rezume-infoline">
+                                        <span class="yearof__film-word">
+                                            Тип внешности:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            европейский, славянский
+                                        </span>
+                                    </p>
+                                    <p class="section__rezume-infoline">
+                                        <span class="yearof__film-word">
+                                            Рост:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            184
+                                        </span>
+                                    </p>
+                                    <p class="section__rezume-infoline">
+                                        <span class="yearof__film-word">
+                                            Вес:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            60
+                                        </span>
+                                    </p>
+                                    <p class="section__rezume-infoline">
+                                        <span class="yearof__film-word">
+                                            Размер одежды:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            44-46
+                                        </span>
+                                    </p>
+                                    <p class="section__rezume-infoline">
+                                        <span class="yearof__film-word">
+                                            Размер обуви:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            42
+                                        </span>
+                                    </p>
+                                    <p class="section__rezume-infoline">
+                                        <span class="yearof__film-word">
+                                            Цвет глаз:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            зелено-голубые
+                                        </span>
+                                    </p>
+                                    <p class="section__rezume-infoline">
+                                        <span class="yearof__film-word">
+                                            Цвет волос:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            светло-русые
+                                        </span>
+                                    </p>
+                                    <p class="section__rezume-infoline">
+                                        <span class="yearof__film-word">
+                                            Длина волос:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            26лет
+                                        </span>
+                                    </p>
+                                </div>
+
+                                <div class="section__rezume-sec">
+                                    <h3 class="section__rezume-exp-title">
+                                        Дополнительно
+                                    </h3>
+                                    <p class="section__rezume-infoline">
+                                        <span class="yearof__film-word">
+                                            Загранпаспорт:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            есть, действителен до 2026 года
+                                        </span>
+                                    </p>
+                                    <p class="section__rezume-infoline">
+                                        <span class="yearof__film-word">
+                                            Водительские права:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            категория В
+                                        </span>
+                                    </p>
+                                    <p class="section__rezume-infoline">
+                                        <span class="yearof__film-word">
+                                            Музыкальные инструменты:
+                                        </span>
+                                        <span class="yearof__film-number">
+                                            фортепиано, гитара
+                                        </span>
+                                    </p>
+                                </div>
+
+                                <div class="section__rezume-sec">
+                                    <h3 class="section__rezume-exp-title">
+                                        Скачать резюме
+                                    </h3>
+                                    <a class="download" href="#" download>
+                                        <img src="./src/assets/img/download.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="scroll-line">
+                                <div class="scroll-line-thumb"></div>
+                                <div class="current-year">
+                                    Опыт
+                                </div>
+                            </div>
+                        </section>
+
                     </div>
                 </main>
                 <footer class="footer">
                     <div class="container">
-
+                        <div class="footer__icons">
+                            <a href="https://www.kinopoisk.ru/name/3731078/" class="footer__icon">
+                                <img src="./src/assets/img/kinopoisk.png" alt="">
+                            </a>
+                            <a href="http://www.kino-teatr.ru/kino/acter/m/ros/371664" class="footer__icon">
+                                <img src="./src/assets/img/kinoteatr.png" alt="">
+                            </a>
+                            <a href="https://www.facebook.com/melnichuk.artem" class="footer__icon">
+                                <img src="./src/assets/img/facebook.png" alt="">
+                            </a>
+                            <a href="https://instagram.com/melnichuk_a" class="footer__icon">
+                                <img src="./src/assets/img/instagram.png" alt="">
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCeNonn9VAcQG7LyTxkWUtyA" class="footer__icon">
+                                <img src="./src/assets/img/youtube.png" alt="">
+                            </a>
+                            <a href="https://vimeo.com/melnichuk" class="footer__icon">
+                                <img src="./src/assets/img/vimeo.png" alt="">
+                            </a>
+                            <a href="http://vk.com/melnichuk_a" class="footer__icon">
+                                <img src="./src/assets/img/vk.png" alt="">
+                            </a>
+                        </div>
                     </div>
                 </footer>
             </div>
         </div>
     </div>
-    <script src="./src/components/scrollbar.js"></script>
-    <script src="./src/components/preloader.js"></script>
-    <script src="./src/components/header.js"></script>
-    <script src="./src/components/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/plugins/zoom/lg-zoom.umd.js"></script>
+    <script src="./src/components/Gallery.js"></script>
+    <script src="./src/components/PhotosSlider.js"></script>
+    <script src="./src/components/Scrollbar.js"></script>
+    <script src="./src/components/Preloader.js"></script>
+    <script src="./src/components/Header.js"></script>
+    <script src="./src/components/Main.js"></script>
 </body>
 
 </html>
