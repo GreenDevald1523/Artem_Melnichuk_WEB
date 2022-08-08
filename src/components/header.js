@@ -9,6 +9,9 @@ let filmographySection = document.querySelector('.section__filmography')
 let videoSection = document.querySelector('.section__video')
 let  photoSection = document.querySelector('.section__photo')
 let  rezumeSection = document.querySelector('.section__rezume')
+let newsSection = document.querySelector('.section__news')
+let theatreSection = document.querySelector('.section__theatre')
+let contactsSection = document.querySelector('.section__contacts')
 filmography.addEventListener("click", () => {
   filmography.classList.add("clr-gold");
   video.classList.remove("clr-gold");
@@ -21,6 +24,9 @@ filmography.addEventListener("click", () => {
   videoSection.classList.add('opacity-0')
   photoSection.classList.add('opacity-0')
   rezumeSection.classList.add('opacity-0')
+  newsSection.classList.add('opacity-0')
+  theatreSection.classList.add('opacity-0')
+  contactsSection.classList.add('opacity-0')
 });
 video.addEventListener("click", () => {
   video.classList.add("clr-gold");
@@ -34,6 +40,9 @@ video.addEventListener("click", () => {
   videoSection.classList.remove('opacity-0')
   photoSection.classList.add('opacity-0')
   rezumeSection.classList.add('opacity-0')
+  newsSection.classList.add('opacity-0')
+  theatreSection.classList.add('opacity-0')
+  contactsSection.classList.add('opacity-0')
 });
 photo.addEventListener("click", () => {
   photo.classList.add("clr-gold");
@@ -47,6 +56,9 @@ photo.addEventListener("click", () => {
   videoSection.classList.add('opacity-0')
   filmographySection.classList.add('opacity-0')
   rezumeSection.classList.add('opacity-0')
+  newsSection.classList.add('opacity-0')
+  theatreSection.classList.add('opacity-0')
+  contactsSection.classList.add('opacity-0')
 });
 rezume.addEventListener("click", () => {
   rezume.classList.add("clr-gold");
@@ -60,6 +72,9 @@ rezume.addEventListener("click", () => {
   photoSection.classList.add('opacity-0')
   videoSection.classList.add('opacity-0')
   filmographySection.classList.add('opacity-0')
+  newsSection.classList.add('opacity-0')
+  theatreSection.classList.add('opacity-0')
+  contactsSection.classList.add('opacity-0')
 });
 news.addEventListener("click", () => {
   news.classList.add("clr-gold");
@@ -69,6 +84,13 @@ news.addEventListener("click", () => {
   filmography.classList.remove("clr-gold");
   theatre.classList.remove("clr-gold");
   contacts.classList.remove("clr-gold");
+  rezumeSection.classList.add('opacity-0')
+  photoSection.classList.add('opacity-0')
+  videoSection.classList.add('opacity-0')
+  filmographySection.classList.add('opacity-0')
+  newsSection.classList.remove('opacity-0')
+  theatreSection.classList.add('opacity-0')
+  contactsSection.classList.add('opacity-0')
 });
 theatre.addEventListener("click", () => {
   theatre.classList.add("clr-gold");
@@ -78,6 +100,13 @@ theatre.addEventListener("click", () => {
   news.classList.remove("clr-gold");
   filmography.classList.remove("clr-gold");
   contacts.classList.remove("clr-gold");
+  theatreSection.classList.remove('opacity-0')
+  rezumeSection.classList.add('opacity-0')
+  photoSection.classList.add('opacity-0')
+  videoSection.classList.add('opacity-0')
+  filmographySection.classList.add('opacity-0')
+  newsSection.classList.add('opacity-0')
+  contactsSection.classList.add('opacity-0')
 });
 contacts.addEventListener("click", () => {
   contacts.classList.add("clr-gold");
@@ -87,6 +116,13 @@ contacts.addEventListener("click", () => {
   news.classList.remove("clr-gold");
   theatre.classList.remove("clr-gold");
   filmography.classList.remove("clr-gold");
+  contactsSection.classList.remove('opacity-0')
+  theatreSection.classList.add('opacity-0')
+  rezumeSection.classList.add('opacity-0')
+  photoSection.classList.add('opacity-0')
+  videoSection.classList.add('opacity-0')
+  filmographySection.classList.add('opacity-0')
+  newsSection.classList.add('opacity-0')
 });
 
 

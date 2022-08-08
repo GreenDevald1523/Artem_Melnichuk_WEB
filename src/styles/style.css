@@ -354,6 +354,7 @@ body {
 
 .clr-gold {
     color: #D8AC56 !important;
+    font-weight: 600 !important;
 }
 
 ::-webkit-scrollbar {
@@ -743,9 +744,7 @@ body {
     margin-bottom: 120px !important;
 }
 
-.section__rezume {
-    
-}
+.section__rezume {}
 
 .section__rezume-body {
     width: 480px;
@@ -754,7 +753,7 @@ body {
     border-radius: 12px;
     padding: 24px 20px;
     margin-top: 127px;
-    box-sizing:border-box;
+    box-sizing: border-box;
     scroll-snap-type: y proximity;
     overflow-y: scroll;
 }
@@ -800,8 +799,9 @@ body {
     max-width: 446px;
     margin-bottom: 6px;
 }
+
 .download {
-    margin-top: 8px;    
+    margin-top: 8px;
 }
 
 .footer {
@@ -811,21 +811,214 @@ body {
 
 .footer__icons {
     display: flex;
+    z-index: 1001;
     position: absolute;
     bottom: 30px;
     right: 0;
 }
-.footer__icon img{
+
+.footer__icon img {
     width: 42px;
     height: 42px;
-    margin-left: 20px;
+    margin-left: 15px;
     border-radius: 50px;
     transition: all 0.2s ease-in-out 0s;
+}
+
+.menu__item {
+    transition: all 0.2s ease-in 0s;
+}
+
+.menu__item:hover {
+    color: #e9cf9c;
 }
 
 .unchoosed:hover {
     background: rgba(255, 255, 255, 0.1) !important;
 }
+
+.section__news {
+    position: relative;
+}
+
+.section__news-items {
+    margin-top: 127px;
+    height: 83vh !important;
+    width: 480px;
+    scroll-snap-type: y proximity;
+    overflow-y: scroll !important;
+}
+
+.section__news-item {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 24px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.section__news-title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.section__news-item-video {
+    width: 440px;
+    height: 248px;
+    margin-bottom: 20px;
+}
+
+.section__news-item-text {
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.section__theatre {
+    position: relative;
+}
+
+.section__theatre-items {
+    margin-top: 127px;
+    height: 83vh !important;
+    width: 480px;
+    scroll-snap-type: y proximity;
+    overflow-y: scroll !important;
+}
+
+.section__theatre-item {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 24px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section__theatre-item-title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 8px;
+    color: #FFFFFF;
+    width: 312px;
+}
+
+.section__theatre-item-year {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.section__theatre-item-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 4px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.section__theatre-spect {
+    margin-top: 24px;
+}
+
+.section__theatre-spect-title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 6px;
+    color: #FFFFFF;
+}
+
+.section__contacts {
+    position: relative;
+}
+
+.section__contacts-items {
+    margin-top: 127px;
+    width: 480px;
+    height: 83vh !important;
+    scroll-snap-type: y proximity;
+    overflow-y: scroll !important;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section__contacts-item {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 24px 20px;
+    box-sizing: border-box;
+    width: 48%;
+    height: 373px;
+    position: relative;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-family: 'Inter';
+}
+
+.section__contacts-item-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.section__contacts-item-name {
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+    width: 196px;
+}
+
+.section__contacts-item-status {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 16px;
+}
+
+.section__contacts-item-phone {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+
+.section__contacts-item-email {
+    font-weight: 400;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.section__contacts-item-icons {
+    margin-top: 16px;
+    display: flex;
+}
+
+.section__contacts-item-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px; 
+}
+
 
 .footer__icon img:hover {
     box-shadow: 2px 0 5px black;
