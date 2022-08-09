@@ -51,7 +51,7 @@ body {
     -webkit-transition: 1s all;
     transition: 1s all;
     opacity: 1;
-    box-shadow: inset 37vw 50px 20vh black;
+    box-shadow: inset 37vw 50px 20vh black !important;
 }
 
 #bg-video {
@@ -1110,5 +1110,5 @@ body {
 
 
 .footer__icon img:hover {
-    box-shadow: 2px 0 5px black;
+    box-shadow: 2px 0 5px black !important;
 }
