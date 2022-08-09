@@ -22,7 +22,7 @@ a, button {
 }
 
 body {
-    background-color: black;
+    background-color: black !important;
 }
 
 .container {
@@ -51,7 +51,7 @@ body {
     -webkit-transition: 1s all;
     transition: 1s all;
     opacity: 1;
-    box-shadow: inset 37vw 50px 20vh;
+    box-shadow: inset 37vw 50px 20vh black;
 }
 
 #bg-video {
@@ -377,7 +377,7 @@ body {
 .scroll-line {
     width: 530px;
     height: 6px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5) !important;
     border-radius: 90px;
     border: 1px solid #D8AC56;
     position: absolute;
@@ -403,7 +403,7 @@ body {
     bottom: 7.1px;
     right: 1px;
     border-radius: 50%;
-    background: #D8AC56;
+    background: #D8AC56 !important;
     cursor: pointer;
 }
 
@@ -433,7 +433,7 @@ body {
     width: 109px;
     height: 35px;
     border-bottom: none !important;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3) !important;
     text-align: center;
     line-height: 35px;
 }
@@ -453,7 +453,7 @@ body {
 .current-year {
     width: 44px;
     height: 23px;
-    background: #FFFFFF;
+    background: #FFFFFF !important;
     border-radius: 6px;
     transform: rotate(-90deg);
     text-align: center;
@@ -486,7 +486,7 @@ body {
 .section__filmography-item {
     width: 480px;
     height: 267px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3) !important;
     border-radius: 12px;
     margin-bottom: 20px;
     padding: 24px 20px;
@@ -508,7 +508,7 @@ body {
     width: 100%;
     max-width: 900px;
     margin: 10px;
-    background: none;
+    background: none !important;
     overflow: hidden;
     z-index: 999;
 }
@@ -529,7 +529,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: none;
+    background: none !important;
     transition: 1s;
     opacity: 0;
 }
@@ -599,8 +599,8 @@ body {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    border: 1px #fff solid;
-    background: none;
+    border: 1px #fff solid !important;
+    background: none !important;
     opacity: 1;
     margin: 0 2px 0;
     cursor: pointer;
@@ -627,7 +627,7 @@ body {
 }
 
 .slider__navlink.active {
-    background-color: #fff;
+    background-color: #fff !important;
 }
 
 .typeof__film {
@@ -669,7 +669,7 @@ body {
 .section__video {
     margin-top: 127px;
     width: 480px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3) !important;
     border-radius: 12px;
 }
 
@@ -724,7 +724,7 @@ body {
 .section__photo-items {
     height: 83vh !important;
     width: 480px !important;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3) !important;
     border-radius: 12px;
     padding: 0 20px !important;
     margin-top: 127px;
@@ -745,7 +745,7 @@ body {
 .section__rezume-body {
     width: 480px;
     height: 83vh !important;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3) !important;
     border-radius: 12px;
     padding: 24px 20px;
     margin-top: 127px;
@@ -939,7 +939,7 @@ body {
 }
 
 .section__news-item {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3) !important;
     border-radius: 12px;
     padding: 24px 20px;
     box-sizing: border-box;
@@ -983,7 +983,7 @@ body {
 }
 
 .section__theatre-item {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3) !important;
     border-radius: 12px;
     padding: 24px 20px;
     box-sizing: border-box;
@@ -1045,7 +1045,7 @@ body {
 }
 
 .section__contacts-item {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3) !important;
     border-radius: 12px;
     padding: 24px 20px;
     box-sizing: border-box;
