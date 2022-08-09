@@ -81,6 +81,7 @@ body {
     text-align: center;
     font-weight: 400;
     position: relative;
+    margin-bottom: 16px;
     z-index: 4;
 }
 
@@ -90,7 +91,6 @@ body {
     font-size: 32px;
     color: rgba(255, 255, 255, 0.6);
     text-align: center;
-    margin-top: 16px;
     position: relative;
     z-index: 4;
 }
@@ -141,10 +141,22 @@ body {
     animation-fill-mode: forwards;
 }
 
+.fz-20 {
+    font-size: 20px !important;
+}
+
+.mb-8 {
+    margin-bottom: 8px !important;
+}
+
+.fz-16 {
+    font-size: 16px !important;
+}
+
 @keyframes fz-16 {
     0% {
         font-size: 32px;
-        text-align: start;
+        text-align: left;
     }
 
     25% {
@@ -161,8 +173,7 @@ body {
 
     100% {
         font-size: 16px;
-        margin-top: 8px;
-        text-align: start;
+        text-align: left;
     }
 }
 
@@ -186,6 +197,7 @@ body {
 
     100% {
         font-size: 20px;
+        margin-bottom: 8px;
         text-align: start;
     }
 }
@@ -395,27 +407,9 @@ body {
     cursor: pointer;
 }
 
-
-/* Track */
-
-::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 90px;
-    border: 1px solid #D8AC56;
-}
-
-
-/* Handle */
-
-::-webkit-scrollbar-thumb {
-    background: #D8AC56;
-    width: 5px;
-    border-radius: 100px;
-    border: 4px solid hsl(0 0% 92% / 1) !important;
-}
-
 .section__filmography {
     position: relative;
+    height: 100% !important;
 }
 
 .section__filmography-chooser {
@@ -471,8 +465,10 @@ body {
 
 .section__filmography-items {
     height: 83vh;
+    position: relative;
     scroll-snap-type: y proximity;
     overflow-y: scroll;
+    /* overflow-y: hidden; */
 }
 
 .main-role-border {
@@ -759,20 +755,112 @@ body {
 }
 
 .section__rezume-title {
-    font-family: 'Inter';
+    font-size: 24px !important;
     font-weight: 600;
-    font-size: 24px;
     color: #FFFFFF;
-    margin-bottom: 4px;
 }
 
 .section__rezume-sub {
+    font-size: 16px !important;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
     color: rgba(255, 255, 255, 0.6);
-    margin-bottom: 12px;
 }
+
+.section__rezume-title-anim {
+    animation: rezumeTitle 0.5s linear;
+    animation-fill-mode: forwards;
+    font-size: 24px !important;
+}
+
+.section__rezume-sub-anim {
+    animation: rezumeSub 0.5s linear;
+    animation-fill-mode: forwards;
+    font-size: 16px !important;
+}
+
+.section__rezume-title-leave-anim {
+    animation: rezumeTitleLeave 0.5s linear;
+    animation-fill-mode: forwards;
+    font-size: 20px !important;
+    text-align: left !important;
+}
+
+.section__rezume-sub-leave-anim {
+    animation: rezumeSubLeave 0.5s linear;
+    animation-fill-mode: forwards;
+    font-size: 16px !important;
+    text-align: left !important;
+}
+
+
+@keyframes rezumeTitle {
+    0% {
+        top: 0px;
+        text-align: left;
+    }
+
+    100% {
+        top: 110px;
+        left: 20px;
+        text-align: start;
+        font-weight: 600;
+        font-size: 24px;
+        color: #FFFFFF;
+    }
+}
+
+.vis-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes rezumeSub {
+    0% {
+        top: 0px;
+        text-align: left;
+    }
+
+    100% {
+        top: 95px;
+        left: 20px;
+        text-align: left;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(255, 255, 255, 0.6);
+        position: relative;
+    }
+}
+
+@keyframes rezumeTitleLeave {
+
+    0% {
+        top: 105px;
+        left: 20px;
+        font-weight: 600;
+        font-size: 24px;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+
+@keyframes rezumeSubLeave {
+    0% {
+        top: 90px;
+        left: 20px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
 
 .section__rezume-benef {
     font-style: italic;
@@ -780,6 +868,7 @@ body {
     font-size: 16px;
     line-height: 19px;
     color: #FFFFFF;
+    margin-top: 8px;
 }
 
 
@@ -1016,7 +1105,7 @@ body {
 .section__contacts-item-icon {
     width: 32px;
     height: 32px;
-    margin-right: 16px; 
+    margin-right: 16px;
 }
 
 

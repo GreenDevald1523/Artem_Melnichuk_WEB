@@ -15,4 +15,8 @@ document.body.onload = function () {
     mainContent.classList.remove('opacity-0')
     mainContent.classList.add('animation-fadeLeft')
   }, 1500)
+  setTimeout(() => {
+    preloaderTitle.classList.add("fz-20");
+    preloaderSub.classList.add("fz-16");
+  }, 3000)
 };
