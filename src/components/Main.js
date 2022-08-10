@@ -1,29 +1,76 @@
-let izbrannaya = document.getElementById('izbrannaya')
-let polnaya = document.getElementById('polnaya')
-let filmsIzb = document.getElementById('section__filmography-items-izb')
-let filmsPol = document.getElementById('section__filmography-items-pol')
-let filmName = document.querySelectorAll('section__video-item-name')
-
+let izbrannaya = document.getElementById("izbrannaya");
+let polnaya = document.getElementById("polnaya");
+let filmsIzb = document.getElementById("section__filmography-items-izb");
+let filmsPol = document.getElementById("section__filmography-items-pol");
+let filmName = document.querySelectorAll("section__video-item-name");
 
 izbrannaya.addEventListener("click", () => {
-    izbrannaya.classList.remove("unchoosed");
-    polnaya.classList.add("unchoosed");
-    filmsIzb.classList.remove('opacity-0')
-    filmsPol.classList.add('opacity-0')
+  izbrannaya.classList.remove("unchoosed");
+  polnaya.classList.add("unchoosed");
+  filmsIzb.classList.remove("opacity-0");
+  filmsPol.classList.add("opacity-0");
 });
 
 polnaya.addEventListener("click", () => {
-    polnaya.classList.remove("unchoosed");
-    izbrannaya.classList.add("unchoosed");
-    filmsIzb.classList.add('opacity-0')
-    filmsPol.classList.remove('opacity-0')
+  polnaya.classList.remove("unchoosed");
+  izbrannaya.classList.add("unchoosed");
+  filmsIzb.classList.add("opacity-0");
+  filmsPol.classList.remove("opacity-0");
 });
 
-// if (filmName.length > 45) {
-//     for (let i = 44; i < filmName.length; i++) {
-//         if ((i === 44) || (i === 45) || (i === 46)) {
-//             filmName = filmName.replace(filmName[i], '.')
-//         }
-//         filmName = filmName.replace(filmName[i], '')
-//     }
-// }
+document.addEventListener("DOMContentLoaded", function () {
+  if ("IntersectionObserver" in window) {
+    var iframesLazy = document.querySelectorAll(
+      "iframe.section__video-item-video"
+    );
+    var iframeObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && entry.target.src.length == 0) {
+          entry.target.src = entry.target.dataset.src;
+          iframeObserver.unobserve(entry.target);
+        }
+      });
+    });
+    iframesLazy.forEach(function (iframe) {
+      iframeObserver.observe(iframe);
+    });
+  } else {
+    var iframesLazy = document.querySelector(
+      "iframe.section__video-item-video"
+    );
+    for (var i = 0; i < iframesLazy.length; i++) {
+      if (lazyVids[i].getAttribute("data-src")) {
+        lazyVids[i].setAttribute("src", lazyVids[i].getAttribute("data-src"));
+      }
+    }
+  }
+});
+
+var scrollbar = document.querySelector(".scrollbar");
+var container = scrollbar.parentNode;
+container.scrollbar = scrollbar;
+container.ratio =
+  (container.scrollHeight - container.offsetHeight) /
+  (container.offsetHeight - scrollbar.offsetHeight);
+container.addEventListener("mousewheel", function (e) {
+  this.scrollTop += e.deltaY;
+  this.scrollbar.style.top =
+    this.scrollTop + this.scrollTop / this.ratio + "px";
+});
+container.addEventListener("mousedown", function (e) {
+  if (e.target === this.scrollbar) {
+    this.prevY = e.pageY;
+  }
+});
+container.addEventListener("mouseup", function (e) {
+  this.prevY = null;
+});
+container.addEventListener("mousemove", function (e) {
+  if (this.prevY) {
+    this.scrollTop += (e.pageY - this.prevY) * this.ratio;
+    this.scrollbar.style.top =
+      this.scrollTop + this.scrollTop / this.ratio + "px";
+    this.prevY = e.pageY;
+  }
+  e.preventDefault();
+});

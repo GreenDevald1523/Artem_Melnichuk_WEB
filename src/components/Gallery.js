@@ -17,7 +17,3 @@ jQuery("#animated-thumbnails")
       },
     });
   });
-
-// lightGallery(document.getElementById('aniimated-thumbnials'), {
-//   thumbnail:true
-// });

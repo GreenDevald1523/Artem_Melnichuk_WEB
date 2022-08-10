@@ -25,6 +25,11 @@ body {
     background-color: black !important;
 }
 
+html,
+body {
+    height: 100vh;
+}
+
 .container {
     max-width: 1180px;
     margin: 0 auto;
@@ -62,7 +67,7 @@ body {
 }
 
 .animation-fadeIn {
-    animation: fadeIn 3s linear;
+    animation: fadeIn 0.2s linear;
 }
 
 #preloader-body {
@@ -96,7 +101,7 @@ body {
 }
 
 .animation-step1-title {
-    animation: step1Title 1s linear;
+    animation: step1Title 1.7s linear;
     animation-iteration-count: 1;
     position: relative;
     animation-fill-mode: forwards;
@@ -104,7 +109,7 @@ body {
 }
 
 .animation-step1-sub {
-    animation: step1Sub 1s linear;
+    animation: step1Sub 1.7s linear;
     animation-iteration-count: 1;
     position: relative;
     animation-fill-mode: forwards;
@@ -112,7 +117,7 @@ body {
 }
 
 .animation-step1-bg {
-    animation: step1Bg 1s linear;
+    animation: step1Bg 1.7s linear;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     right: 0px;
@@ -120,13 +125,13 @@ body {
 }
 
 .animation-step2-prel-body {
-    animation: step2prel 1s linear;
+    animation: step2prel 1.7s linear;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
 .animation-fz-20 {
-    animation: fz-20 1s linear;
+    animation: fz-20 1.7s linear;
     animation-iteration-count: 1;
     font-size: 20px;
     text-align: start;
@@ -134,7 +139,7 @@ body {
 }
 
 .animation-fz-16 {
-    animation: fz-16 1s linear;
+    animation: fz-16 1.7s linear;
     animation-iteration-count: 1;
     font-size: 16px;
     text-align: start;
@@ -226,24 +231,24 @@ body {
 
 @keyframes step1Title {
     0% {
-        left: 300px;
+        left: 320px;
         text-align: start;
     }
 
     20% {
-        left: 240px;
+        left: calc(320px - 64px);
     }
 
     40% {
-        left: 180px;
+        left: calc(320px - 2*64px);
     }
 
     60% {
-        left: 120px;
+        left: calc(320px - 3*64px);
     }
 
     80% {
-        left: 60px;
+        left: calc(320px - 4*64px);
     }
 
     100% {
@@ -254,24 +259,24 @@ body {
 
 @keyframes step1Sub {
     0% {
-        left: 440px;
+        left: 480px;
         text-align: start;
     }
 
     20% {
-        left: 320px;
+        left: calc(480px - 96px);
     }
 
     40% {
-        left: 240px;
+        left: calc(480px - 2*96px);
     }
 
     60% {
-        left: 160px;
+        left: calc(480px - 3*96px);
     }
 
     80% {
-        left: 80px;
+        left: calc(480px - 4*96px);
     }
 
     100% {
@@ -313,7 +318,7 @@ body {
 }
 
 .animation-fadeLeft {
-    animation: fadeLeft 1.2s linear;
+    animation: fadeLeft 1.7s linear;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     position: relative;
@@ -433,7 +438,7 @@ body {
     width: 109px;
     height: 35px;
     border-bottom: none !important;
-    background: rgba(255, 255, 255, 0.3) !important;
+    background: rgba(255, 255, 255, 0.3);
     text-align: center;
     line-height: 35px;
 }
@@ -466,9 +471,19 @@ body {
 .section__filmography-items {
     height: 83vh;
     position: relative;
+    /* box-sizing: border-box;
+    overflow-y: hidden; */
     scroll-snap-type: y proximity;
     overflow-y: scroll;
-    /* overflow-y: hidden; */
+}
+
+.scrollbar {
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background: #ccc;
+    position: absolute;
+    right: 0;
 }
 
 .main-role-border {
@@ -893,27 +908,6 @@ body {
     margin-top: 8px;
 }
 
-.footer {
-    z-index: 1001;
-    position: relative;
-}
-
-.footer__icons {
-    display: flex;
-    z-index: 1001;
-    position: absolute;
-    bottom: 30px;
-    right: 0;
-}
-
-.footer__icon img {
-    width: 42px;
-    height: 42px;
-    margin-left: 15px;
-    border-radius: 50px;
-    transition: all 0.2s ease-in-out 0s;
-}
-
 .menu__item {
     transition: all 0.2s ease-in 0s;
 }
@@ -1108,7 +1102,80 @@ body {
     margin-right: 16px;
 }
 
+#thumb1 {
+    position: absolute !important;
+    top: 0px;
+    right: 100px;
+}
 
-.footer__icon img:hover {
-    box-shadow: 2px 0 5px black !important;
+.section__rezume-icons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.section__rezume-icon {
+    width: 105px;
+    height: 42px;
+    text-align: center;
+    border-radius: 12px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    box-sizing:border-box;
+    padding-top: 5px;
+    transition: all 0.2s ease-in 0s;
+}
+
+.section__rezume-icon:hover {
+    transform: scale(0.95) translate(0, 2px);
+}
+.section__rezume-icon img {
+    width:80px;
+}
+
+.download img{
+    transition: all 0.2s ease-in 0s;
+}
+
+.download:hover img{
+    transform: scale(0.95) translate(0, 2px);
+}
+
+.agenstvo {
+    font-weight: 700;
+    font-size: 12px;
+    padding-top: 13px;
+    color: #FFFFFF;
+    background: #CC9F00;
+}
+
+.kinoteatr {
+    font-weight: 700;
+    font-size: 24px;
+    color: #FFFFFF;
+    background: #B32D36;
+}
+
+.kinopoisk {
+    background: #4A4947;
+    padding-top: 12px;
+}
+
+.filmtoolz {
+    background: #FFFFFF;
+    padding-top: 12px;
+}
+
+.kinolift {
+    background: #0B2BB4;
+    padding-top: 12px;
+}
+
+.castplace {
+    background: linear-gradient(100.56deg, #2C558B 4.1%, #25477C 98.95%);padding-top: 9px;
+}
+
+.castcraft {
+    background: #000000;
+    padding-top: 12px;
 }

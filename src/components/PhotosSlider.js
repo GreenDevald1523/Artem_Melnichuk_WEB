@@ -41,8 +41,4 @@ for (let i = 1; i <= listSliders; i++) {
         }
       });
     });
-
-//    lightGallery(document.getElementById(`.slider__navlink${i}`), {
-//   thumbnail:true
-// });
 }
