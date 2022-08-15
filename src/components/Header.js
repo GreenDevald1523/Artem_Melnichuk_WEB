@@ -14,6 +14,7 @@ let theatreSection = document.querySelector(".section__theatre");
 let contactsSection = document.querySelector(".section__contacts");
 let preloaderTitle = document.getElementById("artem-melnichuk");
 let preloaderSub = document.getElementById("artem-melnichuk__sub");
+let rezSecBody = document.querySelector(".section__rezume-body");
 
 filmography.addEventListener("click", () => {
   filmography.classList.add("clr-gold");
@@ -156,6 +157,10 @@ rezume.addEventListener("click", () => {
     preloaderTitle.classList.add("vis-hidden");
     preloaderSub.classList.add("vis-hidden");
   }, 600);
+  console.log(rezSecBody.scrollTop);
+  if (rezSecBody.scrollTop > 0) {
+    rezSecBody.scrollTop = 0;
+  }
 });
 news.addEventListener("click", () => {
   news.classList.add("clr-gold");

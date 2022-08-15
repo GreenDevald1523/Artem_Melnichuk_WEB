@@ -1,12 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
-
 * {
     margin: 0;
     padding: 0;
     outline: none;
     border: none;
     list-style: none;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
 }
 
 li {
@@ -15,6 +13,7 @@ li {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 a, button {
@@ -31,7 +30,7 @@ body {
 }
 
 .container {
-    max-width: 1180px;
+    max-width: 95%;
     margin: 0 auto;
     position: relative;
 }
@@ -80,7 +79,7 @@ body {
 }
 
 #artem-melnichuk {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-size: 60px;
     color: white;
     text-align: center;
@@ -91,7 +90,7 @@ body {
 }
 
 #artem-melnichuk__sub {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 32px;
     color: rgba(255, 255, 255, 0.6);
@@ -348,8 +347,9 @@ body {
 .header {
     position: fixed;
     z-index: 1000;
+    width: 95%;
     margin-top: 40px;
-    margin-left: 460px;
+    display: flex;
 }
 
 .menu__items {
@@ -472,18 +472,21 @@ body {
     height: 83vh;
     position: relative;
     /* box-sizing: border-box;
-    overflow-y: hidden; */
+        overflow-y: hidden; */
     scroll-snap-type: y proximity;
     overflow-y: scroll;
 }
 
 .scrollbar {
+    cursor: pointer;
     height: 20px;
     width: 20px;
     border-radius: 20px;
     background: #ccc;
     position: absolute;
-    right: 0;
+    /* left: 486.8px; */
+    /* bottom: 597px; */
+    z-index: 1001;
 }
 
 .main-role-border {
@@ -545,7 +548,6 @@ body {
     width: 100%;
     height: 100%;
     background: none !important;
-    transition: 1s;
     opacity: 0;
 }
 
@@ -691,22 +693,25 @@ body {
 .section__video-items {
     display: flex;
     flex-wrap: wrap;
-    height: 80vh;
+    height: 75vh;
     overflow-y: scroll;
     scroll-snap-type: y proximity;
-    padding-bottom: 24px;
-    padding-left: 20px;
+    padding: 24px 20px;
 }
 
 .section__video-item {
-    width: 216px;
+    padding: 8px;
+    box-sizing:border-box;
     margin-right: 8px;
-    height: 190px;
+    width: 212px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    margin-bottom: 11px;
 }
 
 .section__video-item-video {
-    width: 216px;
-    height: 121px;
+    width: 194px;
+    height: 111px;
 }
 
 .section__video-item-name {
@@ -715,8 +720,10 @@ body {
     font-size: 16px;
     line-height: 19px;
     color: #FFFFFF;
-    margin-top: 24px;
     margin-bottom: 8px;
+    width: 200px;
+    height: 38px;
+    overflow-y: hidden;
 }
 
 .main {
@@ -741,7 +748,7 @@ body {
     width: 480px !important;
     background: rgba(255, 255, 255, 0.3) !important;
     border-radius: 12px;
-    padding: 0 20px !important;
+    padding: 20px !important;
     margin-top: 127px;
     box-sizing: border-box;
     scroll-snap-type: y proximity;
@@ -749,11 +756,16 @@ body {
     overflow-x: hidden;
 }
 
+#scrollbar4 {
+    height: 0 !important;
+    width: 0 !important;
+}
+
 .section__photo-item {
     margin-top: 24px !important;
     margin-left: 20px !important;
-    margin-bottom: 120px !important;
 }
+
 
 .section__rezume {}
 
@@ -1121,23 +1133,26 @@ body {
     border-radius: 12px;
     margin-right: 5px;
     margin-bottom: 5px;
-    box-sizing:border-box;
+    box-sizing: border-box;
     padding-top: 5px;
     transition: all 0.2s ease-in 0s;
+    position: relative;
+    z-index: 7;
 }
 
 .section__rezume-icon:hover {
-    transform: scale(0.95) translate(0, 2px);
-}
-.section__rezume-icon img {
-    width:80px;
+    border-radius: 0;
 }
 
-.download img{
+.section__rezume-icon img {
+    width: 80px;
+}
+
+.download img {
     transition: all 0.2s ease-in 0s;
 }
 
-.download:hover img{
+.download:hover img {
     transform: scale(0.95) translate(0, 2px);
 }
 
@@ -1149,6 +1164,11 @@ body {
     background: #CC9F00;
 }
 
+.agenstvo:hover {
+    box-shadow: 0 0 15px #CC9F00;
+    border: 1px solid #a88404;
+}
+
 .kinoteatr {
     font-weight: 700;
     font-size: 24px;
@@ -1156,9 +1176,19 @@ body {
     background: #B32D36;
 }
 
+.kinoteatr:hover {
+    box-shadow: 0 0 15px #B32D36;
+    border: 1px solid #7f2026;
+}
+
 .kinopoisk {
     background: #4A4947;
     padding-top: 12px;
+}
+
+.kinopoisk:hover {
+    box-shadow: 0 0 15px #343332;
+    border: 1px solid #343332;
 }
 
 .filmtoolz {
@@ -1166,16 +1196,154 @@ body {
     padding-top: 12px;
 }
 
+.filmtoolz:hover {
+    box-shadow: 0 0 15px #FFFFFF;
+    border: 1px solid #aaa9a9;
+}
+
 .kinolift {
     background: #0B2BB4;
     padding-top: 12px;
 }
 
+.kinolift:hover {
+    box-shadow: 0 0 15px #0B2BB4;
+}
+
 .castplace {
-    background: linear-gradient(100.56deg, #2C558B 4.1%, #25477C 98.95%);padding-top: 9px;
+    background: linear-gradient(100.56deg, #2C558B 4.1%, #25477C 98.95%);
+    padding-top: 9px;
+}
+
+.castplace:hover {
+    box-shadow: 0 0 15px #2C558B;
 }
 
 .castcraft {
     background: #000000;
     padding-top: 12px;
+}
+
+.castcraft:hover {
+    box-shadow: 0 0 15px #000000;
+}
+
+#rangeScroll {
+    width: 530px;
+    transform: rotate(90deg);
+    position: fixed;
+    top: 380px;
+    right: 700px;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+    position: relative;
+    bottom: 3.5px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+input[type=range] {
+    /* fix for FF unable to apply focus style bug  */
+    border: 1px solid white;
+    /*required for proper track sizing in FF*/
+    width: 300px;
+    border-radius: 90px;
+    border: 1px solid #D8AC56;
+}
+
+input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring {
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]:focus::-moz-range-track {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* for ie */
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: rgba(255, 255, 255, 0.5);
 }
