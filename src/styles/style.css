@@ -1056,7 +1056,7 @@ body {
     padding: 24px 20px;
     box-sizing: border-box;
     width: 48%;
-    height: 373px;
+    height: 445px;
     position: relative;
     margin-right: 8px;
     margin-bottom: 8px;
@@ -1064,8 +1064,7 @@ body {
 }
 
 .section__contacts-item-img {
-    width: 120px;
-    height: 120px;
+    width: 100%;
     border-radius: 4px;
     margin-left: auto;
     margin-right: auto;
@@ -1208,6 +1207,7 @@ body {
 
 .kinolift:hover {
     box-shadow: 0 0 15px #0B2BB4;
+    border: 1px solid #081f84;
 }
 
 .castplace {
@@ -1217,6 +1217,7 @@ body {
 
 .castplace:hover {
     box-shadow: 0 0 15px #2C558B;
+    border: 1px solid #1f3c62;
 }
 
 .castcraft {
@@ -1226,6 +1227,7 @@ body {
 
 .castcraft:hover {
     box-shadow: 0 0 15px #000000;
+    border: 1px solid #555454;
 }
 
 #rangeScroll {
