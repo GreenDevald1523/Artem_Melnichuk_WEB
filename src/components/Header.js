@@ -157,7 +157,6 @@ rezume.addEventListener("click", () => {
     preloaderTitle.classList.add("vis-hidden");
     preloaderSub.classList.add("vis-hidden");
   }, 600);
-  console.log(rezSecBody.scrollTop);
   if (rezSecBody.scrollTop > 0) {
     rezSecBody.scrollTop = 0;
   }

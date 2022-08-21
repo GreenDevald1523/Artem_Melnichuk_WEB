@@ -23,42 +23,62 @@ window.onload = function () {
     let filmThumb = document.querySelector(`#scroll-line-thumb${i}`);
     let curYear = document.querySelector(`#current-year${i}`);
     var scrollbar = document.getElementById(`scrollbar${i}`);
+    let scrolline = document.getElementById(`scroll-line${i}`);
     var container = scrollbar.parentNode;
-    container.scrollbar = scrollbar;
+    container.scrollbar = filmThumb;
     container.ratio =
       (container.scrollHeight - container.offsetHeight) /
-      (container.offsetHeight - scrollbar.offsetHeight);
+      (container.offsetHeight - scrolline.offsetHeight);
+    console.log(container.ratio)
     container.addEventListener("mousewheel", function (e) {
       this.scrollTop += e.deltaY;
       filmThumb.style.left =
-        520 * (this.scrollTop / (this.scrollHeight - this.clientHeight)) + "px";
+        scrolline.offsetWidth *
+          (this.scrollTop / (this.scrollHeight - this.clientHeight)) - 5 +
+        "px";
       curYear.style.left =
-        520 * (this.scrollTop / (this.scrollHeight - this.clientHeight)) -
-        12 +
+        scrolline.offsetWidth *
+          (this.scrollTop / (this.scrollHeight - this.clientHeight)) -
+        15 +
         "px";
     });
     container.addEventListener("mousedown", function (e) {
-      if (e.target === this.scrollbar) {
-        this.prevY = e.pageY;
-      }
+      this.scrollTop += e.deltaY;
+      filmThumb.style.left =
+        scrolline.offsetWidth *
+          (this.scrollTop / (this.scrollHeight - this.clientHeight)) - 5 +
+        "px";
+      curYear.style.left =
+        scrolline.offsetWidth *
+          (this.scrollTop / (this.scrollHeight - this.clientHeight)) -
+        15 +
+        "px";
     });
+    // container.addEventListener("mousedown", function (e) {
+    //   if (e.target === filmThumb) {
+    //     this.prevY = e.pageY;
+    //   }
+    // });
     container.addEventListener("mouseup", function (e) {
       this.prevY = null;
     });
-    filmThumb.addEventListener("mousemove", function (e) {
+    container.addEventListener("mousemove", function (e) {
       if (this.prevY) {
         this.scrollTop += (e.pageY - this.prevY) * this.ratio;
         filmThumb.style.left =
-          520 * (this.scrollTop / (this.scrollHeight - this.clientHeight)) +
+          scrolline.offsetWidth *
+            (this.scrollTop / (this.scrollHeight - this.clientHeight)) +
           "px";
         curYear.style.left =
-          520 * (this.scrollTop / (this.scrollHeight - this.clientHeight)) -
+          scrolline.offsetWidth *
+            (this.scrollTop / (this.scrollHeight - this.clientHeight)) -
           12 +
           "px";
         this.prevY = e.pageY;
       }
       e.preventDefault();
     });
+    // scrolline.addEventListener("click", function (e))
   }
 };
 
