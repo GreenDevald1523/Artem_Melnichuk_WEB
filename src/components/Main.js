@@ -19,7 +19,7 @@ window.addEventListener("scroll", () => {
   let secRezumeMobScroll = jQuery(".sec__rezume-mob").offset().top - 10;
   let secNewsMobScroll = jQuery(".sec__news-mob").offset().top - 10;
   let secTheatreMobScroll = jQuery(".sec__theatre-mob").offset().top - 10;
-  let secContactsMobScroll = jQuery(".sec__contacts-mob").offset().top - 500;
+  let secContactsMobScroll = jQuery(".sec__contacts-mob").offset().top - 790;
   if (document.documentElement.scrollTop < secFilmMobScroll) {
     progressLine.style.width = "0";
   }
@@ -50,14 +50,20 @@ let allIzb = document.querySelectorAll(".section__filmography-item-izb");
 let allPol = document.querySelectorAll(".section__filmography-item-pol");
 let allVideo = document.querySelectorAll(".section__video-item-mob");
 let allPhoto = document.querySelectorAll(".section__photo-item-mob");
+let allNews = document.querySelectorAll(".section__news-item-mob");
+let allHistory = document.querySelectorAll(".section__theatre-item-mob");
 let allIzbLength = allIzb.length;
 let allPolLength = allPol.length;
 let allVideoLength = allVideo.length;
 let allPhotoLength = allPhoto.length;
+let allNewsLength = allNews.length;
+let allHistoryLength = allHistory.length;
 let showFilmographyIzb = document.getElementById("showFilmographyIzb");
 let showFilmographyPol = document.getElementById("showFilmographyPol");
 let showVideo = document.getElementById("showVideo");
 let showPhoto = document.getElementById("showPhoto");
+let showNews = document.getElementById("showNews");
+let showHistory = document.getElementById("showHistory");
 
 for (let i = 0; i < allIzbLength; i++) {
   if (i > 2) {
@@ -83,6 +89,19 @@ for (let i = 0; i < allPhotoLength; i++) {
   }
 }
 
+for (let i = 0; i < allNewsLength; i++) {
+  if (i > 9) {
+    allNews[i].classList.add("opacity-0");
+  }
+}
+
+for (let i = 0; i < allHistoryLength; i++) {
+  if (i > 9) {
+    allHistory[i].classList.add("opacity-0");
+  }
+}
+
+
 showFilmographyIzb.addEventListener("click", () => {
   for (let i = 3; i < allIzbLength; i++) {
     allIzb[i].classList.remove("opacity-0");
@@ -105,10 +124,24 @@ showVideo.addEventListener("click", () => {
 });
 
 showPhoto.addEventListener("click", () => {
-  for (let i = 8; i < allPhotoLength; i++) {
+  for (let i = 10; i < allPhotoLength; i++) {
     allPhoto[i].classList.remove("opacity-0");
   }
   showPhoto.classList.add("opacity-0");
+});
+
+showNews.addEventListener("click", () => {
+  for (let i = 2; i < allNewsLength; i++) {
+    allNews[i].classList.remove("opacity-0");
+  }
+  showNews.classList.add("opacity-0");
+});
+
+showHistory.addEventListener("click", () => {
+  for (let i = 2; i < allHistoryLength; i++) {
+    allHistory[i].classList.remove("opacity-0");
+  }
+  showHistory.classList.add("opacity-0");
 });
 
 izbrannaya.addEventListener("click", () => {
@@ -152,6 +185,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var iframesLazy = document.querySelectorAll(
       "iframe.section__video-item-video"
     );
+    var iframesNewsLazy = document.querySelectorAll(
+      "iframe.section__news-item-video"
+    );
     var iframeObserver = new IntersectionObserver(function (entries, observer) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting && entry.target.src.length == 0) {
@@ -163,11 +199,22 @@ document.addEventListener("DOMContentLoaded", function () {
     iframesLazy.forEach(function (iframe) {
       iframeObserver.observe(iframe);
     });
+    iframesNewsLazy.forEach(function (iframe) {
+      iframeObserver.observe(iframe);
+    });
   } else {
     var iframesLazy = document.querySelector(
       "iframe.section__video-item-video"
     );
+    var iframesNewsLazy = document.querySelectorAll(
+      "iframe.section__news-item-video"
+    );
     for (var i = 0; i < iframesLazy.length; i++) {
+      if (lazyVids[i].getAttribute("data-src")) {
+        lazyVids[i].setAttribute("src", lazyVids[i].getAttribute("data-src"));
+      }
+    }
+    for (var i = 0; i < iframesNewsLazy.length; i++) {
       if (lazyVids[i].getAttribute("data-src")) {
         lazyVids[i].setAttribute("src", lazyVids[i].getAttribute("data-src"));
       }

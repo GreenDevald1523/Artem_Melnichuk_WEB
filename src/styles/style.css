@@ -70,6 +70,10 @@ body {
     animation: fadeIn 0.2s linear;
 }
 
+.animation-fadeIn-mob {
+    animation: fadeIn  2s linear;
+}
+
 #preloader-body {
     margin-left: auto;
     margin-right: auto;
@@ -1420,7 +1424,7 @@ input[type=range]:focus::-ms-fill-upper {
     position: fixed;
     width: 100%;
     z-index: 99999;
-    bottom: -3px;
+    bottom: -2px;
 }
 
 html {
@@ -1428,13 +1432,14 @@ html {
 }
 
 .header__row {
-    background: #EEF5F5 !important;
-    height: 55px;
+    background: #d6d6d6 !important;
+    height: 75px;
 }
 
 .header-mob-items {
     margin-top: -43px;
-    padding-top: 5px;
+    padding-top: 15px;
+    padding-bottom: 7px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -1449,6 +1454,10 @@ html {
 
 .header-mob-item img {
     padding-top: 5px;
+}
+
+.header-mob-item:first-child img{
+    padding-top: 0;
 }
 
 .main-mob {
@@ -1506,7 +1515,7 @@ html {
     font-weight: 400;
     font-size: 18px;
     color: #000000;
-    margin-top: 12px;
+    margin-top: 20px;
     max-width: 100%;
 }
 
@@ -1517,6 +1526,19 @@ html {
 
 .lg-backdrop, .lg-outer {
     z-index: 9999999 !important;
+}
+
+.section__title {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+
+.section__filmography-item-izb:nth-child(3), .section__filmography-item-pol:nth-child(3), .section__video-item-mob:nth-child(7), .section__video-item-mob:nth-child(8), .section__news-item:nth-child(2), .section__theatre-item:nth-child(2){
+    margin-bottom: 0;
 }
 
 @media (max-width: 862px) {
@@ -1587,6 +1609,10 @@ html {
         color: rgba(0, 0, 0, 0.6);
     }
 
+    .section__theatre-items, .section__contacts-items {
+        margin-top: 0;
+    }
+
     .nameof__film, .yearof__film-number, .roleof__film-number, .authorof__film-number, .castingof__film-number {
         color: #000000;
     }
@@ -1604,9 +1630,12 @@ html {
     .section__video-item {
         margin-right: 0;
         width: 168px;
-        height: 144px;
+        height: 150.65px;
         margin-right: 22px;
         padding: 0;
+        background: white;
+        box-sizing: border-box;
+        padding: 8px;
     }
 
     .section__video-item-name {
@@ -1615,8 +1644,8 @@ html {
     }
 
     .section__video-item-video {
-        width: 168px;
-        height: 93.56px;
+        width: 152px;
+        height: 84.65px;
     }
 
     .section__video-item-name {
@@ -1628,16 +1657,18 @@ html {
     }
 
     .section__rezume-title, .section__rezume-sub, .section__rezume-benef, .section__rezume-exp-title {
-        color:#000000;
+        color: #000000;
     }
 
     .section__rezume-body {
         width: 100%;
         margin-top: 0;
     }
+
     .section__rezume-infoline {
         max-width: 100%;
     }
+
     .section__rezume-icon {
         width: 95px;
     }
@@ -1660,7 +1691,7 @@ html {
 
 
     .section__contacts-item-email, .section__contacts-item-name, .section__contacts-item-phone, .section__contacts-item-status {
-        color:black;
+        color: black;
     }
 
     .section__contacts-item-img {
@@ -1678,7 +1709,7 @@ html {
     }
 
     .section__news-title, .section__news-item-text, .section__theatre-item-title, .section__theatre-spect-title {
-        color:#000000;
+        color: #000000;
     }
 
     .section__theatre-item-year {
@@ -1688,6 +1719,7 @@ html {
     .section__theatre-item, .section__filmography-item, .section__rezume-body, .section__news-item {
         background: white !important;
     }
+
     .section__theatre-items {
         width: 100%;
         display: flex;
@@ -1746,17 +1778,13 @@ html {
 
     .section__contacts-item-img {
         width: 130px;
-    } 
+    }
 }
 
 
 @media (max-width: 435px) {
     #bg-video {
         right: -120px;
-    }
-
-    .artem-melnichuk-node {
-        top: 450px;
     }
 }
 

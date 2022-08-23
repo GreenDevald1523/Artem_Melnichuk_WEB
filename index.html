@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lg-thumbnail.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lg-zoom.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js "></script>
     <title>Сайт Артёма Мельничука</title>
 </head>
 
@@ -1165,7 +1166,7 @@
                                         Шоурил актера (2020)
                                     </h2>
                                     <iframe class="section__news-item-video" width="640" height="360"
-                                        src="https://www.youtube.com/embed/nlYw5e4r3_c?feature=oembed" frameborder="0"
+                                        data-src="https://www.youtube.com/embed/nlYw5e4r3_c?feature=oembed" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe>
                                     <p class="section__news-item-text">
@@ -1177,7 +1178,7 @@
                                         Шоурил актера (2020)
                                     </h2>
                                     <iframe class="section__news-item-video" width="640" height="360"
-                                        src="https://www.youtube.com/embed/nlYw5e4r3_c?feature=oembed" frameborder="0"
+                                    data-src="https://www.youtube.com/embed/nlYw5e4r3_c?feature=oembed" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe>
                                     <p class="section__news-item-text">
@@ -1363,7 +1364,7 @@
                     </video>
                 </div>
                 <div class="container">
-                    <div class="artem-melnichuk-node">
+                    <div class="artem-melnichuk-node animation-fadeIn-mob">
                         <h1 class="artem-melnichuk-mob__title">
                             Артём Мельничук
                         </h1>
@@ -1378,7 +1379,7 @@
                     <div class="container">
                         <ul class="header-mob-items">
                             <a href="#secFilm" class="header-mob-item selected-item">
-                                <img src="./src/assets/img/List.svg" alt="">
+                                <img src="./src/assets/img/Clapperboard.svg" alt="">
                             </a>
                             <a href="#secVideo" class="header-mob-item">
                                 <img src="./src/assets/img/Video Call.svg" alt="">
@@ -1408,6 +1409,9 @@
             <main class="main-mob">
                 <div class="container">
                     <section id="secFilm" class="sec__filmography-mob">
+                        <h2 class="section__title">
+                            Фильмография
+                        </h2>
                         <div class="sec__filmography-mob-chooser">
                             <div class="personal__filmography" id="izbrannayaMob">
                                 <span>Избранная</span>
@@ -1918,6 +1922,9 @@
                         </button>
                     </section>
                     <section id="secVideo" class="sec__video-mob">
+                        <h2 class="section__title">
+                            Видео
+                        </h2>
                         <div class="section__video-items">
                             <div class="section__video-item section__video-item-mob">
                                 <p class="section__video-item-name">
@@ -2008,6 +2015,9 @@
                         </button>
                     </section>
                     <section id="secPhoto" class="sec__photo-mob">
+                        <h2 class="section__title">
+                            Фото
+                        </h2>
                         <div class="section__photo-items-mob" id="animated-thumbnails-mob">
                             <a class="section__photo-item-mob" href="./src/assets/img/photo3.jpg">
                                 <img alt=".." src="./src/assets/img/photo3.jpg" />
@@ -2054,6 +2064,9 @@
                         </button>
                     </section>
                     <section id="secRezume" class="sec__rezume-mob section__rezume">
+                        <h2 class="section__title">
+                            Резюме
+                        </h2>
                         <div class="section__rezume-body">
                             <h2 class="section__rezume-title">
                                 Артём Мельничук
@@ -2285,13 +2298,16 @@
                         </div>
                     </section>
                     <section id="secNews" class="sec__news-mob section__news">
+                        <h2 class="section__title">
+                            Новости
+                        </h2>
                         <div class="section__news-items">
                             <div class="section__news-item">
                                 <h2 class="section__news-title">
                                     Шоурил актера (2020)
                                 </h2>
                                 <iframe class="section__news-item-video" width="640" height="360"
-                                    src="https://www.youtube.com/embed/nlYw5e4r3_c?feature=oembed" frameborder="0"
+                                    data-src="https://www.youtube.com/embed/nlYw5e4r3_c?feature=oembed" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
                                 <p class="section__news-item-text">
@@ -2303,7 +2319,7 @@
                                     Шоурил актера (2020)
                                 </h2>
                                 <iframe class="section__news-item-video" width="640" height="360"
-                                    src="https://www.youtube.com/embed/nlYw5e4r3_c?feature=oembed" frameborder="0"
+                                data-src="https://www.youtube.com/embed/nlYw5e4r3_c?feature=oembed" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
                                 <p class="section__news-item-text">
@@ -2311,11 +2327,14 @@
                                 </p>
                             </div>
                         </div>
-                        <button class="show-all" id="showPhoto">
+                        <button class="show-all" id="showNews">
                             Посмотреть вce новости
                         </button>
                     </section>
                     <section id="secTheatre" class="sec__theatre-mob section__theatre">
+                        <h2 class="section__title">
+                            Театр
+                        </h2>
                         <div class="section__theatre-items">
                             <div class="section__theatre-item">
                                 <h2 class="section__theatre-item-title">
@@ -2420,11 +2439,14 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="show-all" id="showPhoto">
+                        <button class="show-all" id="showHistory">
                             Посмотреть вcю историю
                         </button>
                     </section>
                     <section id="secContacts" class="sec__contacts-mob section__contacts">
+                        <h2 class="section__title">
+                            Контакты
+                        </h2>
                         <div class="section__contacts-items">
                             <div class="section__contacts-item">
                                 <img src="./src/assets/img/contact1.jpg" alt="" class="section__contacts-item-img">

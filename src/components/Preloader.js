@@ -4,6 +4,8 @@ window.onload = function () {
   let preloaderSub = document.getElementById("artem-melnichuk__sub");
   let preloaderBg = document.getElementById("bg-video");
   let mainContent = document.getElementById("mainContent");
+
+  let mobNote = document.querySelector('.artem-melnichuk-node')
   preloader.classList.remove("animation-fadeIn");
   // preloaderTitle.classList.add("animation-step1-title");
   // preloaderSub.classList.add("animation-step1-sub");
@@ -80,6 +82,8 @@ window.onload = function () {
     });
     // scrolline.addEventListener("click", function (e))
   }
+
+
 };
 
 // let w = document.getElementById('section__filmography-items-pol')
