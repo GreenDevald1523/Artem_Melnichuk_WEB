@@ -46,6 +46,16 @@ body {
     }
 }
 
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 #preloader {
     position: fixed;
     left: 0;
@@ -66,12 +76,49 @@ body {
     position: fixed;
 }
 
+#bg-video-second {
+    opacity: 0;
+}
+
+.animation-mob-bg {
+    animation: bgFadeIn 1s linear;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+/* @keyframes bgFadeIn {
+    0%{
+        opacity: 0;
+    }
+    100% 
+} */
+
 .animation-fadeIn {
     animation: fadeIn 0.2s linear;
+    animation-fill-mode: forwards;
+}
+
+.animation-fadeIn-mob-bg {
+    animation: fadeInZoom 1.5s linear;
+    animation-fill-mode: forwards;
 }
 
 .animation-fadeIn-mob {
-    animation: fadeIn  2s linear;
+    animation: moveUp 1.2s linear;
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 210px);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(0px, -5px);
+    }
+    100% {
+        transform: translate(0, 0px);
+    }
 }
 
 #preloader-body {
@@ -1406,15 +1453,14 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .artem-melnichuk-mob__title {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 36px;
     color: #FFFFFF;
-
 }
 
 .artem-melnichuk-mob__sub {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 24px;
     color: rgba(255, 255, 255, 0.6);
@@ -1432,8 +1478,9 @@ html {
 }
 
 .header__row {
-    background: #d6d6d6 !important;
+    background: #eeecec !important;
     height: 75px;
+    box-sizing:border-box;
 }
 
 .header-mob-items {
@@ -1541,7 +1588,15 @@ html {
     margin-bottom: 0;
 }
 
+.first-screen-mob {
+    background: black !important;
+}
+
 @media (max-width: 862px) {
+    body {
+        background: #EEF5F5 !important;
+    }
+
     #desktop {
         display: none;
     }
@@ -1550,16 +1605,11 @@ html {
         display: block;
     }
 
-    body {
-        background: #EEF5F5 !important;
-    }
-
-    #bg-video {
-        opacity: 1;
+    #bg-video-second {
         height: 640px;
         top: 0;
         position: absolute;
-        z-index: -9999;
+        z-index: 1;
         zoom: 100%;
         right: 0px;
     }
@@ -1762,7 +1812,7 @@ html {
 }
 
 @media (max-width: 602px) {
-    #bg-video {
+    #bg-video-second {
         right: -150px;
     }
 }
@@ -1783,7 +1833,7 @@ html {
 
 
 @media (max-width: 435px) {
-    #bg-video {
+    #bg-video-second {
         right: -120px;
     }
 }

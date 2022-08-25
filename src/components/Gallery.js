@@ -9,6 +9,7 @@ jQuery("#animated-thumbnails")
       pager: true,
       galleryId: "nature",
       plugins: [lgZoom, lgThumbnail],
+      download: false,
       mobileSettings: {
         controls: false,
         showCloseIcon: false,
@@ -29,6 +30,7 @@ jQuery("#animated-thumbnails-mob")
       pager: true,
       galleryId: "nature",
       plugins: [lgZoom, lgThumbnail],
+      download: false,
       mobileSettings: {
         controls: false,
         showCloseIcon: false,

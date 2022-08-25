@@ -3,6 +3,7 @@ window.onload = function () {
   let preloaderTitle = document.getElementById("artem-melnichuk");
   let preloaderSub = document.getElementById("artem-melnichuk__sub");
   let preloaderBg = document.getElementById("bg-video");
+  let preloaderBgMob = document.getElementById("bg-video-second")
   let mainContent = document.getElementById("mainContent");
 
   let mobNote = document.querySelector('.artem-melnichuk-node')
@@ -10,6 +11,7 @@ window.onload = function () {
   // preloaderTitle.classList.add("animation-step1-title");
   // preloaderSub.classList.add("animation-step1-sub");
   preloaderBg.classList.add("animation-step1-bg");
+  preloaderBgMob.classList.add("animation-fadeIn-mob-bg");
   setTimeout(() => {
     preloader.classList.add("animation-step2-prel-body");
     preloaderTitle.classList.add("animation-fz-20");
