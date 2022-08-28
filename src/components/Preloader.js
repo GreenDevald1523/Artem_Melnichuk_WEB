@@ -23,12 +23,26 @@ window.onload = function () {
     preloaderTitle.classList.add("fz-20");
     preloaderSub.classList.add("fz-16");
   }, 4000);
+
   for (let i = 1; i <= 7; i++) {
     let filmThumb = document.querySelector(`#scroll-line-thumb${i}`);
     let curYear = document.querySelector(`#current-year${i}`);
-    var scrollbar = document.getElementById(`scrollbar${i}`);
+    let scrollbar = document.getElementById(`scrollbar${i}`);
     let scrolline = document.getElementById(`scroll-line${i}`);
-    var container = scrollbar.parentNode;
+
+    let scrollStartY = 133;
+    let scrollEndY = 133;
+    let scrollDelta = 0;
+    let mouseDown = false
+    let contentElement = document.querySelector(`._scrollbar-container${i}`);
+
+    function changeScrollDelta (persentage) {
+      scrollDelta += persentage;
+        if (scrollDelta > 1) scrollDelta = 1
+        if (scrollDelta < 0) scrollDelta = 0
+    }
+
+    let container = scrollbar.parentNode;
     container.scrollbar = filmThumb;
     container.ratio =
       (container.scrollHeight - container.offsetHeight) /
@@ -36,53 +50,84 @@ window.onload = function () {
     console.log(container.ratio)
     container.addEventListener("mousewheel", function (e) {
       this.scrollTop += e.deltaY;
+      changeScrollDelta(e.deltaY / scrolline.offsetWidth)
       filmThumb.style.left =
         scrolline.offsetWidth *
-          (this.scrollTop / (this.scrollHeight - this.clientHeight)) - 5 +
+        scrollDelta - 5 +
         "px";
       curYear.style.left =
         scrolline.offsetWidth *
-          (this.scrollTop / (this.scrollHeight - this.clientHeight)) -
+        scrollDelta -
         15 +
         "px";
     });
-    container.addEventListener("mousedown", function (e) {
-      this.scrollTop += e.deltaY;
-      filmThumb.style.left =
-        scrolline.offsetWidth *
-          (this.scrollTop / (this.scrollHeight - this.clientHeight)) - 5 +
+    scrolline.addEventListener("click", function (e) {
+      console.log("e.clientY", e.clientY)
+      scrollEndY = e.clientY
+        contentElement.scrollTop += scrollEndY - scrollStartY;
+
+        changeScrollDelta((scrollEndY - scrollStartY) / scrolline.offsetWidth)
+        scrollStartY = e.clientY
+        
+        filmThumb.style.left = scrolline.offsetWidth *
+        scrollDelta - 5 +
         "px";
       curYear.style.left =
         scrolline.offsetWidth *
-          (this.scrollTop / (this.scrollHeight - this.clientHeight)) -
-        15 +
-        "px";
+        scrollDelta - 20 +
+        "px";         
     });
-    // container.addEventListener("mousedown", function (e) {
-    //   if (e.target === filmThumb) {
-    //     this.prevY = e.pageY;
-    //   }
-    // });
+    filmThumb.addEventListener("mousedown", function (e) {
+      console.log('mouse has downed')
+      mouseDown = true
+      scrollStartY = e.clientY
+    });
+    filmThumb.addEventListener("mouseup", function (e) {
+      console.log('mouse up')
+      mouseDown = false
+    });
     container.addEventListener("mouseup", function (e) {
-      this.prevY = null;
+      console.log('mouse up')
+      mouseDown = false
     });
     container.addEventListener("mousemove", function (e) {
-      if (this.prevY) {
-        this.scrollTop += (e.pageY - this.prevY) * this.ratio;
-        filmThumb.style.left =
-          scrolline.offsetWidth *
-            (this.scrollTop / (this.scrollHeight - this.clientHeight)) +
-          "px";
-        curYear.style.left =
-          scrolline.offsetWidth *
-            (this.scrollTop / (this.scrollHeight - this.clientHeight)) -
-          12 +
-          "px";
-        this.prevY = e.pageY;
+      
+      if (mouseDown) {
+        e.preventDefault()
+        scrollEndY = e.clientY
+        this.scrollTop += scrollEndY - scrollStartY;
+        changeScrollDelta((scrollEndY - scrollStartY) / scrolline.offsetWidth)
+        scrollStartY = e.clientY
+        
+        filmThumb.style.left = scrolline.offsetWidth *
+        scrollDelta - 5 +
+        "px";
+      curYear.style.left =
+        scrolline.offsetWidth *
+        scrollDelta - 15 +
+        "px";     
       }
-      e.preventDefault();
+      
     });
-    // scrolline.addEventListener("click", function (e))
+    scrolline.addEventListener("mousemove", function (e) {
+      
+      if (mouseDown) {
+        e.preventDefault()
+        scrollEndY = e.clientY
+        contentElement.scrollTop += scrollEndY - scrollStartY;
+        changeScrollDelta((scrollEndY - scrollStartY) / scrolline.offsetWidth)
+        scrollStartY = e.clientY
+        
+        filmThumb.style.left = scrolline.offsetWidth *
+        scrollDelta - 5 +
+        "px";
+      curYear.style.left =
+        scrolline.offsetWidth *
+        scrollDelta - 20 +
+        "px";     
+      }
+      
+    });
   }
 
 
@@ -100,3 +145,15 @@ window.onload = function () {
 //   src.value = w.scrollY;
 //   windowScrollTop = $(w).scrollTop();
 // }, false);
+
+
+// console.log("e.clientY", e.clientY,
+        // "scrollEndY", scrollEndY,
+        // "scrollStartY", scrollStartY,
+        // "all height", scrolline.offsetWidth
+        // )
+        // console.log('scroll %', (scrollEndY - scrollStartY) / scrolline.offsetWidth)
+        // const delta = (contentElement.scrollTop / (contentElement.scrollHeight - contentElement.clientHeight))
+        // scrollStartY = e.clientY
+        // console.log("delta", delta)
+        // console.log("right delta", scrollDelta)
